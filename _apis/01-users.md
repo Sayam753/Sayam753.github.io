@@ -1,5 +1,6 @@
 ---
 title: APIs for Users
+permalink: /apis/users
 toc: true
 ---
 
@@ -10,7 +11,8 @@ toc: true
 {: .notice--info}
 
 ```bash
-curl --location --request GET 'http://localhost:8000/users' --header 'Authorization: Basic staff_user_auth'
+curl --location --request GET 'http://localhost:8000/users' \
+--header 'Authorization: Basic staff_user_auth'
 ```
 
 ### Sample Responses
@@ -58,7 +60,8 @@ curl --location --request GET 'http://localhost:8000/users' --header 'Authorizat
 {: .notice--info}
 
 ```bash
-curl --location --request GET 'http://localhost:8000/user/id' --header 'Authorization: Basic user_auth'
+curl --location --request GET 'http://localhost:8000/user/id' \
+--header 'Authorization: Basic user_auth'
 ```
 
 ### Sample Responses
@@ -97,9 +100,9 @@ curl --location --request GET 'http://localhost:8000/user/id' --header 'Authoriz
 
 ```bash
 curl --location --request POST 'http://localhost:8000/user/new' \
---header 'Content-Type: application/json' --data-raw \
-'{
-  "email": "sayam049@gmail.com",  
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "email": "sayam049@gmail.com",
   "password": "hello world"
 }'
 ```
@@ -110,7 +113,7 @@ curl --location --request POST 'http://localhost:8000/user/new' \
 
     ```json
     {
-      "Status Code": "200",
+      "Status Code": 200,
       "Message": "User successfully created"
     }
     ```
@@ -129,7 +132,8 @@ curl --location --request POST 'http://localhost:8000/user/new' \
 {: .notice--info}
 
 ```bash
-curl --location --request DELETE 'http://localhost:8000/user/id' --header 'Authorization: Basic user_auth'
+curl --location --request DELETE 'http://localhost:8000/user/id' \
+--header 'Authorization: Basic user_auth'
 ```
 
 ### Sample Responses
@@ -138,7 +142,7 @@ curl --location --request DELETE 'http://localhost:8000/user/id' --header 'Autho
 
     ```json
     {
-      "Status Code": "200",
+      "Status Code": 200,
       "Message": "User successfully deleted"
     }
     ```
