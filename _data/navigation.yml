@@ -18,3 +18,9 @@ apis:
         url: /apis/users
       - title: Accounts
         url: /apis/accounts
+      - title: Exchanges
+        url: /apis/exchanges
+      - title: Currencies
+        url: /apis/currencies
+      - title: Watchlists
+        url: /apis/watchlists

@@ -58,15 +58,11 @@ for file_index, item in enumerate(data["item"], 1):
                 "-")[1].strip() for n in response]
             count = 1
             for code in codes:
-                index = None
-                try:
-                    index = example_responses.index(code)
-                except ValueError:
-                    pass
-                else:
-                    example = response[index]
-                    body = response[index]["body"].replace("\n", "\n    ")
-                    body = body.replace("\t", "  ")
-                    f.write(f"{count}. Response - {code}\n\n")
-                    f.write(f"    ```json\n    {body}\n    ```\n")
-                    count += 1
+                for index, value in enumerate(example_responses):
+                    if value == code:
+                        example = response[index]
+                        body = response[index]["body"].replace("\n", "\n    ")
+                        body = body.replace("\t", "  ")
+                        f.write(f"{count}. Response - {code}\n\n")
+                        f.write(f"    ```json\n    {body}\n    ```\n")
+                        count += 1
