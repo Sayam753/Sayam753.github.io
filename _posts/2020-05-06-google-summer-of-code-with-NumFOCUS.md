@@ -2,6 +2,8 @@
 title: GSoC'20 with NumFOCUS
 categories: [Open Source]
 tags: [GSoC, PyMC]
+permalink: /gsoc-with-numfocus/
+last_modified_at: "2020-05-18"
 ---
 
 I am super excited to say that I have been selected as a Google Summer of Code student by NumFOCUS for PyMC4. I would like to thank my mentors [Thomas Wiecki](https://github.com/twiecki) and [Maxim Kochurov](https://github.com/ferrine) and the entire NumFOCUS community for giving this opportunity.

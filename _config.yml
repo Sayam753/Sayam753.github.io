@@ -20,8 +20,8 @@ title                    : "Sayam's Blog"
 title_separator          : "|"
 subtitle                 : "Version 1.0" # site tagline that appears below site title in masthead
 name                     : "Sayam Kumar"
-description              : "Latest Blogs on Tech"
-url                      : "https://sayam753.github.io"
+description              : "My Online Portfolio"
+url                      : "https://www.codingpaths.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Sayam753/Sayam753.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -40,7 +40,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true #, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -53,8 +53,8 @@ google:
   instant_search         : # false (default), true
 
 # SEO Related
-google_site_verification :
-bing_site_verification   :
+google_site_verification : "YLVA6cNTr5l2XzIZhMave7-Cb-SRRQPxdqV2M5LFaZY"
+bing_site_verification   : "1379382A5B3A2E5090BDF04E4A229FE7"
 yandex_site_verification :
 naver_site_verification  :
 
@@ -92,9 +92,6 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: sayamkumar049@gmail.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/sayamkumar753"
@@ -117,15 +114,7 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Sayam753"
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-    #   # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
-    #   # url:
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url:
+
 
 
 # Reading Files
