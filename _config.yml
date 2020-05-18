@@ -60,7 +60,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -75,9 +75,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google"
   google:
-    tracking_id          :
+    tracking_id          : "UA-142581559-1"
     anonymize_ip         : # true, false (default)
 
 
