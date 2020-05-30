@@ -1,0 +1,64 @@
+site_name: My Docs
+# Project information
+site_name: Sayam's Blog
+site_description: My Online Portfolio
+site_author: Sayam Kumar
+site_url: https://www.codingpaths.com/
+
+# Repository
+repo_name: Sayam753/Sayam753.github.io
+repo_url: https://github.com/Sayam753/Sayam753.github.io
+
+theme:
+    name: 'material'
+    language: en
+    icon:
+        logo: 'fontawesome/solid/robot'
+    palette:
+        primary: blue
+        accent: blue
+    font:
+        text: Roboto
+        code: Roboto Mono
+    features:
+        - tabs
+
+# Extensions
+markdown_extensions:
+    - admonition
+    - footnotes
+    - pymdownx.superfences
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:pymdownx.emoji.twemoji
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
+
+extra_css: [extra.css]
+
+# Plugins
+plugins:
+    - search
+    - mkdocs-jupyter
+    - git-revision-date-localized
+        
+extra:
+    disqus: sayam049
+    social:
+        - icon: 'fontawesome/brands/github'
+          link: 'https://github.com/Sayam753'
+        - icon: 'fontawesome/brands/twitter'
+          link: 'https://twitter.com/sayamkumar753'
+        - icon: 'fontawesome/brands/linkedin'
+          link: 'https://www.linkedin.com/in/sayam049/'
+
+# Analytics
+google_analytics:
+    - UA-142581559-1
+    - auto
+
+# Copyright
+copyright: Copyright &copy; 2020 codingpaths.com
