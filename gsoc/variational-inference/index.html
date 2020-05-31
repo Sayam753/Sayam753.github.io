@@ -6577,7 +6577,7 @@ KL(q(\theta)||p(\theta|D)) = \int q(\theta) \log \left( \frac{q(\theta)}{p(\thet
 $$<div class="admonition note">
     <p class="admonition-title">Note</p>
     <p>
-        If two distributions are similar, then their entropies are similar, implies the KL divergence with respect to two distributions will be smaller. And vica versa. In Variational Inference, the whole idea is to **minimize** KL divergence so that our approximating distribution $q(\theta)$ can be made similar to $p(\theta|D)$.
+        If two distributions are similar, then their entropies are similar, implies the KL divergence with respect to two distributions will be smaller. And vica versa. In Variational Inference, the whole idea is to <strong>minimize</strong> KL divergence so that our approximating distribution $q(\theta)$ can be made similar to $p(\theta|D)$.
     </p>
 </div><p>??? tip "Extra: What are latent variables?"
     If you go about exploring any paper talking about Variational Inference, then most certainly, the papers mention about latent variables instead of parameters. The parameters are fixed quantities for the model whereas latent variables are <strong>unobserved</strong> quantities of the model conditioned on parameters. Also, we model parameters by probability distributions. For simplicity, let's consider the running terminology of <strong>parameters</strong> only.</p>
@@ -6594,9 +6594,12 @@ $$<p>So, substituting back, our running equation becomes -</p>
 $$
 KL + \int q(\theta) \log \left( \frac{p(\theta, D)}{q(\theta)} \right) d\theta = \log \left(p(D) \right)
 $$<p>The term $\int q(\theta) \log \left( \frac{p(\theta, D)}{q(\theta)} \right) d\theta$ is called Evidence Lower Bound (ELBO). The right side of the equation $\log \left(p(D) \right)$ is constant.</p>
-<p>!!! note "Observe"
-    <strong>Minimizing</strong> the KL divergence is equivalent to <strong>maximizing</strong> the ELBO. Also, the ELBO does not depend on posterior distribution.</p>
-<p>Also,</p>
+<div class="admonition note">
+    <p class="admonition-title">Observe</p>
+    <p>
+        <strong>Minimizing</strong> the KL divergence is equivalent to <strong>maximizing</strong> the ELBO. Also, the ELBO does not depend on posterior distribution.
+    </p>
+</div><p>Also,</p>
 $$
 ELBO = \int q(\theta) \log \left( \frac{p(\theta, D)}{q(\theta)} \right) d\theta\\
 ELBO = E_{q(\theta)}\left [\log \left( \frac{p(\theta, D)}{q(\theta)} \right) \right]\\
@@ -6611,72 +6614,24 @@ q(\zeta) = \prod_{i=1}^{k} N(\zeta_k; \mu_k, \sigma^2_k)
 $$<p>Now, the transformed joint probability distribution of the model becomes -</p>
 $$
 p\left (D, \zeta \right) = p\left (D, T^{-1}\left (\zeta \right) \right) \left | det J_{T^{-1}}(\zeta)  \right |\\
-$$<p>??? tip "Extra: Proof of transformation equation"
-    To simplify notations, let's use $Y=T(X)$ instead of $\zeta=T(\theta)$. After reaching the results, we will put the values back. Also, let's denote cummulative distribution function (cdf) as $F$. There are two cases which respect to properties of function $T$.</p>
-
-<pre><code>**Case 1** - When $T$ is an increasing function
-
-$$
-F_Y(y) = P(Y&lt;=y) = P(T(X)&lt;=y)\\
-= P\left(X&lt;=T^{-1}(y) \right) = F_X\left(T^{-1}(y) \right)\\
-F_Y(y) = F_X\left(T^{-1}(y) \right)
-$$
-
-Let's differentiate with respect to $y$ both sides -
-
-$$
-\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
-P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}
-$$
-
-**Case 2** - When $T$ is a descreasing function
-
-$$
-F_Y(y) = P(Y&lt;=y) = P(T(X)&lt;=y) = P\left(X&gt;=T^{-1}(y) \right)\\
-= 1-P\left(X&lt;T^{-1}(y) \right) = 1-P\left(X&lt;=T^{-1}(y) \right) = 1-F_X\left(T^{-1}(y) \right)\\
-F_Y(y) = 1-F_X\left(T^{-1}(y) \right)
-$$
-
-Let's differentiate with respect to $y$ both sides -
-
-$$
-\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (1-F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
-P_Y(y) = (-1) P_X\left(T^{-1}(y) \right) (-1) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}\\
-P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}
-$$
-
-Combining both results -
-
-$$
-P_Y(y) = P_X\left(T^{-1}(y) \right) \left | \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y} \right |
-$$
-
-Now comes the role of Jacobians to deal with multivariate parameters $X$ and $Y$.
-
-$$
-J_{T^{-1}}(Y) = \begin{vmatrix}
-\frac{\partial (T_1^{-1})}{\partial y_1} &amp; ... &amp; \frac{\partial (T_1^{-1})}{\partial y_k}\\ 
-. &amp;  &amp; .\\ 
-. &amp;  &amp; .\\ 
-\frac{\partial (T_k^{-1})}{\partial y_1} &amp; ... &amp;\frac{\partial (T_k^{-1})}{\partial y_k}
-\end{vmatrix}
-$$
-
-Concluding -
-
-$$
-P(Y) = P(T^{-1}(Y)) |det J_{T^{-1}}(Y)|\\
-P(Y) = P(X) |det J_{T^{-1}}(Y)|
-$$
-
-Substitute $X$ as $\theta$ and $Y$ as $\zeta$, we will get -
-
-$$
-P(\zeta) = P(T^{-1}(\zeta)) |det J_{T^{-1}}(\zeta)|\\
-$$
-
-</code></pre>
-<h3 id="elbo-in-transformed-space">ELBO in transformed Space<a class="anchor-link" href="#ELBO-in-transformed-Space">&#182;</a></h3><p>Let's bring back the equation formed at <a href="#evidence-lower-bound">ELBO</a>. Expressing ELBO in terms of $\zeta$ -</p>
+$$<details class="tip">
+    <summary>Extra: Proof of transformation equation</summary>
+    <p>To simplify notations, let's use $Y=T(X)$ instead of $\zeta=T(\theta)$. After reaching the results, we will put the values back. Also, let's denote cummulative distribution function (cdf) as $F$. There are two cases which respect to properties of function $T$.<br><strong>Case 1</strong> - When $T$ is an increasing function $$F_Y(y) = P(Y<=y) = P(T(X)<=y)\\
+    = P\left(X<=T^{-1}(y) \right) = F_X\left(T^{-1}(y) \right)\\
+    F_Y(y) = F_X\left(T^{-1}(y) \right)$$<br>Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
+    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$<br><strong>Case 2</strong> - When $T$ is a descreasing function $$F_Y(y) = P(Y<=y) = P(T(X)<=y) = P\left(X>=T^{-1}(y) \right)\\
+    = 1-P\left(X<T^{-1}(y) \right) = 1-P\left(X<=T^{-1}(y) \right) = 1-F_X\left(T^{-1}(y) \right)\\
+    F_Y(y) = 1-F_X\left(T^{-1}(y) \right)$$<br>Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (1-F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
+    P_Y(y) = (-1) P_X\left(T^{-1}(y) \right) (-1) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}\\
+    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$<br>Combining both results - $$P_Y(y) = P_X\left(T^{-1}(y) \right) \left | \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y} \right |$$<br>Now comes the role of Jacobians to deal with multivariate parameters $X$ and $Y$. $$J_{T^{-1}}(Y) = \begin{vmatrix}
+    \frac{\partial (T_1^{-1})}{\partial y_1} & ... & \frac{\partial (T_1^{-1})}{\partial y_k}\\ 
+    . &  & .\\ 
+    . &  & .\\ 
+    \frac{\partial (T_k^{-1})}{\partial y_1} & ... &\frac{\partial (T_k^{-1})}{\partial y_k}
+    \end{vmatrix}$$<br>Concluding - $$P(Y) = P(T^{-1}(Y)) |det J_{T^{-1}}(Y)|\\P(Y) = P(X) |det J_{T^{-1}}(Y)|
+    $$<br>Substitute $X$ as $\theta$ and $Y$ as $\zeta$, we will get - $$P(\zeta) = P(T^{-1}(\zeta)) |det J_{T^{-1}}(\zeta)|\\$$
+    </p>
+</details><h3 id="elbo-in-transformed-space">ELBO in transformed Space<a class="anchor-link" href="#ELBO-in-transformed-Space">&#182;</a></h3><p>Let's bring back the equation formed at <a href="#evidence-lower-bound">ELBO</a>. Expressing ELBO in terms of $\zeta$ -</p>
 $$
 ELBO = E_{q(\theta)}\left [\log \left(p(\theta, D) \right) \right] + H_{q(\theta)}\\
 ELBO = E_{q(\zeta)}\left [\log \left(p\left (D, T^{-1}\left (\zeta \right) \right) \left | det J_{T^{-1}}(\zeta)  \right | \right) \right] + H_{q(\zeta)}
