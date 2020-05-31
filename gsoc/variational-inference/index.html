@@ -11,7 +11,7 @@
         <meta name="description" content="My Online Portfolio">
       
       
-        <link rel="canonical" href="https://www.codingpaths.com/gsoc/Variational%20Inference/">
+        <link rel="canonical" href="https://www.codingpaths.com/gsoc/variational-inference/">
       
       
         <meta name="author" content="Sayam Kumar">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Variational Inference - Sayam's Blog</title>
+        <title>Variational inference - Sayam's Blog</title>
       
     
     
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Variational Inference
+              Variational inference
             
           </span>
         </div>
@@ -176,7 +176,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../gsoc-2020-with-numfocus/" class="md-tabs__link md-tabs__link--active">
           Gsoc
         </a>
       
@@ -265,6 +265,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-nav__link">
+      GSoC'20 with NumFOCUS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -273,22 +285,10 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Variational Inference" class="md-nav__link md-nav__link--active">
-      Variational Inference
+    <a href="./" title="Variational inference" class="md-nav__link md-nav__link--active">
+      Variational inference
     </a>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-nav__link">
-      GSoC'20 with NumFOCUS
-    </a>
   </li>
 
         
@@ -309,7 +309,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/gsoc/Variational Inference.ipynb" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/gsoc/variational-inference.ipynb" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -6574,9 +6574,12 @@ $$
 $$<p>Remember? We were stuck upon Bayesian Equation because of denominator term but now, we can estimate the posterior distribution $p(\theta|D)$ by another distribution $q(\theta)$ over all the parameters of the model.</p>
 $$
 KL(q(\theta)||p(\theta|D)) = \int q(\theta) \log \left( \frac{q(\theta)}{p(\theta|D)} \right) d\theta\\
-$$<p>!!! note "Note"
-    If two distributions are similar, then their entropies are similar, implies the KL divergence with respect to two distributions will be smaller. And vica versa. In Variational Inference, the whole idea is to <strong>minimize</strong> KL divergence so that our approximating distribution $q(\theta)$ can be made similar to $p(\theta|D)$.</p>
-<p>??? tip "Extra: What are latent variables?"
+$$<div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>
+        If two distributions are similar, then their entropies are similar, implies the KL divergence with respect to two distributions will be smaller. And vica versa. In Variational Inference, the whole idea is to **minimize** KL divergence so that our approximating distribution $q(\theta)$ can be made similar to $p(\theta|D)$.
+    </p>
+</div><p>??? tip "Extra: What are latent variables?"
     If you go about exploring any paper talking about Variational Inference, then most certainly, the papers mention about latent variables instead of parameters. The parameters are fixed quantities for the model whereas latent variables are <strong>unobserved</strong> quantities of the model conditioned on parameters. Also, we model parameters by probability distributions. For simplicity, let's consider the running terminology of <strong>parameters</strong> only.</p>
 <h3 id="evidence-lower-bound">Evidence Lower Bound<a class="anchor-link" href="#Evidence-Lower-Bound">&#182;</a></h3><p>There is again an issue with KL divergence formula as it still involves posterior term i.e. $p(\theta|D)$. Let's get rid of it -</p>
 $$
@@ -6681,9 +6684,12 @@ $$<p>Since, we are optimizing ELBO by factorized Normal Distributions, let's bri
 $$
 ELBO = E_{q(\zeta)}\left [\log \left(p\left (D, T^{-1}\left (\zeta \right) \right) \left | det J_{T^{-1}}(\zeta)  \right | \right) \right] + H_{q(\zeta)}\\
 ELBO = E_{q(\zeta)}\left [\log \left(p\left (D, T^{-1}\left (\zeta \right) \right) \left | det J_{T^{-1}}(\zeta)  \right | \right) \right] + \frac{1}{2}\left ( \log \left ( 2 \pi {\sigma}^2 \right) + 1 \right )
-$$<p>!!! success "Success"
-    The above ELBO equation is the final one which needs to be optimized.</p>
-
+$$<div class="admonition success">
+    <p class="admonition-title">Success</p>
+    <p>
+        The above ELBO equation is the final one which needs to be optimized.
+    </p>
+</div><h3 id="lets-code">Let's Code<a class="anchor-link" href="#Let's-Code">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -7195,60 +7201,6 @@ $$<p>where $sig$ is the sigmoid function.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-    
-    <div class="inner_cell">
-        
-        
-        <div class="input_area">
-            <div class=" highlight highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">six</span>
-</pre></div>
-
-        </div>
-    </div>
-
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-    
-    <div class="inner_cell">
-        
-        
-        <div class="input_area">
-            <div class=" highlight highlight-ipynb hl-python"><pre><span></span><span class="n">six</span><span class="o">.</span><span class="n">__version__</span>
-</pre></div>
-
-        </div>
-    </div>
-
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;1.14.0&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
  
 
 
@@ -7291,7 +7243,7 @@ $$<p>where $sig$ is the sigmoid function.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: May 30, 2020
+      Last update: May 31, 2020
     
   </small>
 </div>
@@ -7304,7 +7256,7 @@ $$<p>where $sig$ is the sigmoid function.</p>
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/gsoc/Variational%20Inference/",this.page.identifier="gsoc/Variational%20Inference/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/gsoc/variational-inference/",this.page.identifier="gsoc/variational-inference/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -7318,7 +7270,7 @@ $$<p>where $sig$ is the sigmoid function.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../.." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -7327,25 +7279,11 @@ $$<p>where $sig$ is the sigmoid function.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 GSoC'20 with NumFOCUS
               </div>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     </div>
