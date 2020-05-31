@@ -6616,20 +6616,20 @@ $$
 p\left (D, \zeta \right) = p\left (D, T^{-1}\left (\zeta \right) \right) \left | det J_{T^{-1}}(\zeta)  \right |\\
 $$<details class="tip">
     <summary>Extra: Proof of transformation equation</summary>
-    <p>To simplify notations, let's use $Y=T(X)$ instead of $\zeta=T(\theta)$. After reaching the results, we will put the values back. Also, let's denote cummulative distribution function (cdf) as $F$. There are two cases which respect to properties of function $T$.<br><strong>Case 1</strong> - When $T$ is an increasing function $$F_Y(y) = P(Y<=y) = P(T(X)<=y)\\
+    <p><br>To simplify notations, let's use $Y=T(X)$ instead of $\zeta=T(\theta)$. After reaching the results, we will put the values back. Also, let's denote cummulative distribution function (cdf) as $F$. There are two cases which respect to properties of function $T$.<br><br><strong>Case 1</strong> - When $T$ is an increasing function $$F_Y(y) = P(Y<=y) = P(T(X)<=y)\\
     = P\left(X<=T^{-1}(y) \right) = F_X\left(T^{-1}(y) \right)\\
-    F_Y(y) = F_X\left(T^{-1}(y) \right)$$<br>Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
-    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$<br><strong>Case 2</strong> - When $T$ is a descreasing function $$F_Y(y) = P(Y<=y) = P(T(X)<=y) = P\left(X>=T^{-1}(y) \right)\\
+    F_Y(y) = F_X\left(T^{-1}(y) \right)$$Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
+    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$<strong>Case 2</strong> - When $T$ is a descreasing function <br>$$F_Y(y) = P(Y<=y) = P(T(X)<=y) = P\left(X>=T^{-1}(y) \right)\\
     = 1-P\left(X<T^{-1}(y) \right) = 1-P\left(X<=T^{-1}(y) \right) = 1-F_X\left(T^{-1}(y) \right)\\
-    F_Y(y) = 1-F_X\left(T^{-1}(y) \right)$$<br>Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (1-F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
+    F_Y(y) = 1-F_X\left(T^{-1}(y) \right)$$Let's differentiate with respect to $y$ both sides - $$\frac{\mathrm{d} (F_Y(y))}{\mathrm{d} y} = \frac{\mathrm{d} (1-F_X\left(T^{-1}(y) \right))}{\mathrm{d} y}\\
     P_Y(y) = (-1) P_X\left(T^{-1}(y) \right) (-1) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}\\
-    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$<br>Combining both results - $$P_Y(y) = P_X\left(T^{-1}(y) \right) \left | \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y} \right |$$<br>Now comes the role of Jacobians to deal with multivariate parameters $X$ and $Y$. $$J_{T^{-1}}(Y) = \begin{vmatrix}
+    P_Y(y) = P_X\left(T^{-1}(y) \right) \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y}$$Combining both results - $$P_Y(y) = P_X\left(T^{-1}(y) \right) \left | \frac{\mathrm{d} (T^{-1}(y))}{\mathrm{d} y} \right |$$Now comes the role of Jacobians to deal with multivariate parameters $X$ and $Y$. $$J_{T^{-1}}(Y) = \begin{vmatrix}
     \frac{\partial (T_1^{-1})}{\partial y_1} & ... & \frac{\partial (T_1^{-1})}{\partial y_k}\\ 
     . &  & .\\ 
     . &  & .\\ 
     \frac{\partial (T_k^{-1})}{\partial y_1} & ... &\frac{\partial (T_k^{-1})}{\partial y_k}
-    \end{vmatrix}$$<br>Concluding - $$P(Y) = P(T^{-1}(Y)) |det J_{T^{-1}}(Y)|\\P(Y) = P(X) |det J_{T^{-1}}(Y)|
-    $$<br>Substitute $X$ as $\theta$ and $Y$ as $\zeta$, we will get - $$P(\zeta) = P(T^{-1}(\zeta)) |det J_{T^{-1}}(\zeta)|\\$$
+    \end{vmatrix}$$Concluding - $$P(Y) = P(T^{-1}(Y)) |det J_{T^{-1}}(Y)|\\P(Y) = P(X) |det J_{T^{-1}}(Y)|
+    $$Substitute $X$ as $\theta$ and $Y$ as $\zeta$, we will get - $$P(\zeta) = P(T^{-1}(\zeta)) |det J_{T^{-1}}(\zeta)|\\$$
     </p>
 </details><h3 id="elbo-in-transformed-space">ELBO in transformed Space<a class="anchor-link" href="#ELBO-in-transformed-Space">&#182;</a></h3><p>Let's bring back the equation formed at <a href="#evidence-lower-bound">ELBO</a>. Expressing ELBO in terms of $\zeta$ -</p>
 $$
