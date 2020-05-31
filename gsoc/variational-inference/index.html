@@ -6496,7 +6496,7 @@ $$<details class="tip">
     $$P\left (\bigcap_{i=1}^{n}X_i\right ) = \prod_{i=1}^{n} P\left (X_i | P\left (\bigcap_{j=1}^{i-1}X_j\right )\right )$$
     Keep the above equation in mind. Let's bring back Markov property. To bring some intuition behind Markov property, let's reuse <a href="#bayesian-network-example">Bayesian Network Example</a>. If we say, the student scored very good  <strong>grades</strong>, then it is highly likely the student gets  <strong>acceptance letter </strong> to university. No matter how  <strong>difficult</strong> the class was, how much  <strong>intelligent </strong> the student was, and no matter what his/her  <strong>SAT</strong> score was. The key thing to note here is by  <strong>observing</strong> the node's parent, the influence by  <strong>non-descendants</strong> towards the node gets eliminated. Now, the equation becomes -<br>
     $$P\left (\bigcap_{i=1}^{n}X_i\right ) = \prod_{i=1}^{n} P\left (X_i | Par\left (X_i\right )\right )$$
-    :partying_face: With the above equation, we have proved  <strong>Factorization Theorem </strong> in Probability.
+    Bingo, with the above equation, we have proved  <strong>Factorization Theorem </strong> in Probability.
     </p>
 </details><p>The decomposition of running <a href="#bayesian-network-example">Bayesian Network Example</a> can be written as -</p>
 $$
