@@ -10,5 +10,9 @@ I started implementing ideas into my fork. Within 4-5 days, I have come up with 
 
 On the way of my exploration of [tfp.vi](https://www.tensorflow.org/probability/api_docs/python/tfp/vi) module, I see that we can use either [tfp.distributions.JointDistributionSequential](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionSequential?version=nightly) or [tfp.distributions.MultivariateNormalDiag](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/MultivariateNormalDiag?version=nightly) to implement Mean Field ADVI. The PR #280 is based on JointDistributionSequential. I will incorporate use of MultivariateNormalDiag after having a flattened view of parameters.
 
+I observe that I am a week ahead of my proposed GSoC timeline. This means I have more time to explore PyMC4.
+
 Thank you for reading!
-See you next week.
+
+With :heart:,
+Sayam
