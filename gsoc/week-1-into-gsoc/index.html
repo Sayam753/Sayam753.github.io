@@ -17,7 +17,7 @@
         <meta name="author" content="Sayam Kumar">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
     
     
       
@@ -63,6 +63,7 @@
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -372,7 +373,10 @@
 <p>I started implementing ideas into my fork. Within 4-5 days, I have come up with a reasonable design incorporating the above 3 guidelines. And here is the PR <a href="https://github.com/pymc-devs/pymc4/pull/280">#280</a> and now, I am working on the suggestions to improve API design.</p>
 <p>On the way of my exploration of <a href="https://www.tensorflow.org/probability/api_docs/python/tfp/vi">tfp.vi</a> module, I see that we can use either <a href="https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionSequential?version=nightly">tfp.distributions.JointDistributionSequential</a> or <a href="https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/MultivariateNormalDiag?version=nightly">tfp.distributions.MultivariateNormalDiag</a> to implement Mean Field ADVI. The PR #280 is based on JointDistributionSequential. I will incorporate use of MultivariateNormalDiag after having a flattened view of parameters.</p>
 <p>I observe that I am a week ahead of my proposed GSoC timeline. This means I have more time to explore PyMC4.</p>
+<p>I am thankful to my mentor for his constant guidance and pymc-devs for being such a supportive community.</p>
+<div class="admonition note">
 <p>Thank you for reading!</p>
+</div>
 <p>With <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" />,
 Sayam</p>
                 
@@ -383,7 +387,7 @@ Sayam</p>
 <div class="md-source-date">
   <small>
     
-      Last update: June 8, 2020
+      Last update: June 16, 2020
     
   </small>
 </div>
@@ -494,14 +498,14 @@ Sayam</p>
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.c03f0417.min.js"
+            worker: "../../assets/javascripts/worker/search.7a2ea5ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
