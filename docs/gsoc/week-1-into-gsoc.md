@@ -12,7 +12,10 @@ On the way of my exploration of [tfp.vi](https://www.tensorflow.org/probability
 
 I observe that I am a week ahead of my proposed GSoC timeline. This means I have more time to explore PyMC4.
 
-Thank you for reading!
+I am thankful to my mentor for his constant guidance and pymc-devs for being such a supportive community.
+
+!!! note ""
+    Thank you for reading!
 
 With :heart:,
 Sayam
