@@ -11,7 +11,7 @@
         <meta name="description" content="My Online Portfolio">
       
       
-        <link rel="canonical" href="https://www.codingpaths.com/gsoc/week-2-into-gsoc/">
+        <link rel="canonical" href="https://www.codingpaths.com/django/initial-server-setup/">
       
       
         <meta name="author" content="Sayam Kumar">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Week 2 into GSoC - Sayam's Blog</title>
+        <title>Initial Server Setup - Sayam's Blog</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#week-2-into-gsoc" class="md-skip">
+        <a href="#initial-server-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Week 2 into GSoC
+              Initial Server Setup
             
           </span>
         </div>
@@ -181,7 +181,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../django/deploy-django/" class="md-tabs__link">
+        <a href="../deploy-django/" class="md-tabs__link md-tabs__link--active">
           Django
         </a>
       
@@ -194,7 +194,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../gsoc-2020-with-numfocus/" class="md-tabs__link md-tabs__link--active">
+        <a href="../../gsoc/gsoc-2020-with-numfocus/" class="md-tabs__link">
           Gsoc
         </a>
       
@@ -256,10 +256,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Django
@@ -283,7 +285,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../django/deploy-django/" title="Deploy Django" class="md-nav__link">
+    <a href="../deploy-django/" title="Deploy Django" class="md-nav__link">
       Deploy Django
     </a>
   </li>
@@ -293,11 +295,94 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../django/initial-server-setup/" title="Initial Server Setup" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Initial Server Setup
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Initial Server Setup" class="md-nav__link md-nav__link--active">
       Initial Server Setup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuring-centos-7" class="md-nav__link">
+    1. Configuring Centos 7
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuring Centos 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-centos" class="md-nav__link">
+    Updating centos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-hostname" class="md-nav__link">
+    Setting up hostname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-hostname-in-the-hosts-file" class="md-nav__link">
+    Setting up hostname in the hosts file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adding-a-new-user" class="md-nav__link">
+    2. Adding a new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-securing-the-server" class="md-nav__link">
+    3. Securing the server
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -310,12 +395,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Gsoc
@@ -339,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-nav__link">
+    <a href="../../gsoc/gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-nav__link">
       GSoC'20 with NumFOCUS
     </a>
   </li>
@@ -351,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../variational-inference/" title="Variational inference" class="md-nav__link">
+    <a href="../../gsoc/variational-inference/" title="Variational inference" class="md-nav__link">
       Variational inference
     </a>
   </li>
@@ -363,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../week-1-into-gsoc/" title="Week 1 into GSoC" class="md-nav__link">
+    <a href="../../gsoc/week-1-into-gsoc/" title="Week 1 into GSoC" class="md-nav__link">
       Week 1 into GSoC
     </a>
   </li>
@@ -373,87 +456,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Week 2 into GSoC
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Week 2 into GSoC" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../gsoc/week-2-into-gsoc/" title="Week 2 into GSoC" class="md-nav__link">
       Week 2 into GSoC
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#work-done-this-week" class="md-nav__link">
-    Work done this week
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#experiments" class="md-nav__link">
-    Experiments
-  </a>
-  
-    <nav class="md-nav" aria-label="Experiments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gist-1-source" class="md-nav__link">
-    Gist 1 - Source
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gist-2-source" class="md-nav__link">
-    Gist 2 - Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tasks-for-week-3" class="md-nav__link">
-    Tasks for week 3
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -463,7 +470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../week-3-into-gsoc/" title="Week 3 into GSoC" class="md-nav__link">
+    <a href="../../gsoc/week-3-into-gsoc/" title="Week 3 into GSoC" class="md-nav__link">
       Week 3 into GSoC
     </a>
   </li>
@@ -475,7 +482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../week-4-into-gsoc/" title="Week 4 into GSoC" class="md-nav__link">
+    <a href="../../gsoc/week-4-into-gsoc/" title="Week 4 into GSoC" class="md-nav__link">
       Week 4 into GSoC
     </a>
   </li>
@@ -487,7 +494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../week-5-into-gsoc/" title="Week 5 into GSoC" class="md-nav__link">
+    <a href="../../gsoc/week-5-into-gsoc/" title="Week 5 into GSoC" class="md-nav__link">
       Week 5 into GSoC
     </a>
   </li>
@@ -524,30 +531,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#work-done-this-week" class="md-nav__link">
-    Work done this week
+  <a href="#1-configuring-centos-7" class="md-nav__link">
+    1. Configuring Centos 7
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#experiments" class="md-nav__link">
-    Experiments
-  </a>
-  
-    <nav class="md-nav" aria-label="Experiments">
+    <nav class="md-nav" aria-label="1. Configuring Centos 7">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gist-1-source" class="md-nav__link">
-    Gist 1 - Source
+  <a href="#updating-centos" class="md-nav__link">
+    Updating centos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gist-2-source" class="md-nav__link">
-    Gist 2 - Source
+  <a href="#setting-up-hostname" class="md-nav__link">
+    Setting up hostname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-hostname-in-the-hosts-file" class="md-nav__link">
+    Setting up hostname in the hosts file
   </a>
   
 </li>
@@ -558,8 +565,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks-for-week-3" class="md-nav__link">
-    Tasks for week 3
+  <a href="#2-adding-a-new-user" class="md-nav__link">
+    2. Adding a new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-securing-the-server" class="md-nav__link">
+    3. Securing the server
   </a>
   
 </li>
@@ -576,7 +590,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/gsoc/week-2-into-gsoc.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/django/initial-server-setup.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -584,45 +598,64 @@
                   
                 
                 
-                <h1 id="week-2-into-gsoc">Week 2 into GSoC<a class="headerlink" href="#week-2-into-gsoc" title="Permanent link">&para;</a></h1>
-<p>Following up the work done in <a href="/gsoc/week-1-into-gsoc">week 1</a>, I started exploring surrounding packages of PyMC4 i.e. TFP, ArviZ and PyMC3 to gain better insights how things need to be integrated. On the way, I opened a few issues and PRs fixing docstrings.</p>
-<ul>
-<li>ArviZ Issue <a href="https://github.com/arviz-devs/arviz/issues/1232">#1232</a> regarding rendering of notebooks.</li>
-<li>PyMC4 Issue <a href="https://github.com/pymc-devs/pymc4/issues/283">#283</a> regarding Transformations. I am still wondering whether the transformations are missing or automatically handled.</li>
-<li>TFP PR <a href="https://github.com/tensorflow/probability/pull/965">#965</a> that fixes <code>tfb.Chain</code> docstrings.</li>
-</ul>
-<h2 id="work-done-this-week">Work done this week<a class="headerlink" href="#work-done-this-week" title="Permanent link">&para;</a></h2>
-<p>Figuring out the solutions over the review of the PR <a href="https://github.com/pymc-devs/pymc4/pull/280">#280</a>, I have -</p>
-<ul>
-<li>Added <code>sample</code> method for sampling from posterior distribution.</li>
-<li>Fixed return type from <code>fit</code> function to include <code>Approximation</code> as well.</li>
-<li>Updated variational quickstart notebook incorporating both of the changes above.</li>
-</ul>
-<p>It took me a bit longer to look out for good variable names and to make quick-start notebook similar to PyMC3's Variational API <a href="https://docs.pymc.io/notebooks/variational_api_quickstart.html">notebook</a>. But the time was worth it.</p>
-<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
-<p>Most of the time this week, I spent experimenting on ideas building on top of week 1's work. I polished out my experiments and created two gists.</p>
-<h3 id="gist-1-source">Gist 1 - <a href="https://gist.github.com/Sayam753/df2d11b6b5a1e875710656ecc013fad5">Source</a><a class="headerlink" href="#gist-1-source" title="Permanent link">&para;</a></h3>
-<p>Comparison between MeanField ADVI in TFP, PyMC3 and PyMC4. It was fun doing this.</p>
-<script src="https://gist.github.com/Sayam753/df2d11b6b5a1e875710656ecc013fad5.js"></script>
+                <h1 id="initial-server-setup">Initial Server Setup<a class="headerlink" href="#initial-server-setup" title="Permanent link">&para;</a></h1>
+<p>In this blog, we will be going through initial server setup on Centos7. This is generally recommended before diving straight into production. Centos is an open source Linux distribution under RHEL(Red Hat Enterprise Linux). The reason why Centos is preferred over Ubuntu is because of its stability. Its updates can take about more than 7-8 years to come.</p>
+<h2 id="1-configuring-centos-7">1. Configuring Centos 7<a class="headerlink" href="#1-configuring-centos-7" title="Permanent link">&para;</a></h2>
+<p>After purchasing a server, login into it using the ssh command in the terminal. Remember to use your public ip and the password given by the administrator.</p>
+<div class="highlight"><pre><span></span><code>ssh root@your_ip_here
+</code></pre></div>
 
-<h3 id="gist-2-source">Gist 2 - <a href="https://gist.github.com/Sayam753/36bf35c482b705545eecb5353a8f8f6a">Source</a><a class="headerlink" href="#gist-2-source" title="Permanent link">&para;</a></h3>
-<p>Experimenting with ArviZ. I started learning from how trace from <code>tfp.mcmc.sample_chain</code> gets converted to ArviZ InferenceData. Following the same, I soon ran into shape issues while integrating it into <code>sample</code> method. I plan to resolve it in week 3.</p>
-<script src="https://gist.github.com/Sayam753/36bf35c482b705545eecb5353a8f8f6a.js"></script>
+<p>If you are getting a warning like “LC_CTYPE: cannot change locale (UTF-8): No such file or directory”, then enter the following command in your local terminal by logging out. The LC variables determine the language of encoding the characters. So, we need to export this variable.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">logout</span>
+<span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
+ssh root@your_ip_here
+</code></pre></div>
 
-<h2 id="tasks-for-week-3">Tasks for week 3<a class="headerlink" href="#tasks-for-week-3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Tests about convergence checks</li>
-<li>Add convergence criteria example in quick start notebook</li>
-<li>Include samples for untransformed variables as well</li>
-<li>Handle shape issues with ArviZ while sampling</li>
-<li>More user friendly optimizers</li>
-</ul>
-<p>I am thankful to my mentor for his constant guidance and pymc-devs for being such a supportive community.</p>
-<div class="admonition note">
-<p>Thank you for reading!</p>
-</div>
-<p>With <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" />,
-Sayam</p>
+<h3 id="updating-centos">Updating centos<a class="headerlink" href="#updating-centos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo yum update
+sudo yum upgrade
+</code></pre></div>
+
+<h3 id="setting-up-hostname">Setting up hostname<a class="headerlink" href="#setting-up-hostname" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>hostnamectl set-hostname centos-server
+hostname <span class="c1"># to check the hostname</span>
+</code></pre></div>
+
+<h3 id="setting-up-hostname-in-the-hosts-file">Setting up hostname in the hosts file<a class="headerlink" href="#setting-up-hostname-in-the-hosts-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo nano /etc/hosts
+</code></pre></div>
+
+<p>Add your ip followed by tab and then type centos-server which is the hostname. Then hit CTRL+x to exit and enter to save the changes.</p>
+<h2 id="2-adding-a-new-user">2. Adding a new user<a class="headerlink" href="#2-adding-a-new-user" title="Permanent link">&para;</a></h2>
+<p>Root has the most privileges in the OS. It can be destructive to operate the server under root user. To limit the scope, we will be creating a new user. In future, if any need arises, we will change the permissions for this user.</p>
+<div class="highlight"><pre><span></span><code>adduser user_name
+passwd user_name <span class="c1">#setting up password for new user</span>
+gpasswd -a user_name wheel <span class="c1">#adding sudo privileges</span>
+<span class="nb">logout</span>
+</code></pre></div>
+
+<h2 id="3-securing-the-server">3. Securing the server<a class="headerlink" href="#3-securing-the-server" title="Permanent link">&para;</a></h2>
+<p>There are bots all around trying to find vulnerabilities in the servers. Till now, we have used password based authentication which is highly exploitable. These bots try brute force attacks to enter our server. So to fix this, we will disable password based authentication and setup ssh keys. These ssh keys will be stored in the local machine and the server. After this whenever we try to ssh into our server, it will analyse the keys and give access. So, setting up ssh keys for authentication in the local machine in home directory. Hit enter for default actions –</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen -t rsa <span class="c1">#generating keys</span>
+ssh-copy-id user_name@your_ip_here <span class="c1">#coping the keys to the server</span>
+<span class="nb">logout</span>
+</code></pre></div>
+
+<p>Now you can ssh login without password for the new user –</p>
+<div class="highlight"><pre><span></span><code>ssh user_name@your_ip_here
+</code></pre></div>
+
+<p>Change configuration in <code>/etc/ssh/sshd_config</code>, thereby making our server more secure –</p>
+<div class="highlight"><pre><span></span><code>PermitRootLogin no
+PasswordAuthentication no
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>sudo nano /etc/ssh/sshd_config
+sudo systemctl restart sshd
+</code></pre></div>
+
+<p>Up next – Deploy Django Applications on Centos
+Thanks for reading!</p>
                 
                   
                     
@@ -631,7 +664,7 @@ Sayam</p>
 <div class="md-source-date">
   <small>
     
-      Last update: June 14, 2020
+      Last update: July 22, 2020
     
   </small>
 </div>
@@ -644,7 +677,7 @@ Sayam</p>
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/gsoc/week-2-into-gsoc/",this.page.identifier="gsoc/week-2-into-gsoc/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/django/initial-server-setup/",this.page.identifier="django/initial-server-setup/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -658,7 +691,7 @@ Sayam</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../week-1-into-gsoc/" title="Week 1 into GSoC" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deploy-django/" title="Deploy Django" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -667,19 +700,19 @@ Sayam</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Week 1 into GSoC
+                Deploy Django
               </div>
             </div>
           </a>
         
         
-          <a href="../week-3-into-gsoc/" title="Week 3 into GSoC" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../gsoc/gsoc-2020-with-numfocus/" title="GSoC'20 with NumFOCUS" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Week 3 into GSoC
+                GSoC'20 with NumFOCUS
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
