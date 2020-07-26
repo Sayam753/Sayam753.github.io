@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://www.codingpaths.com/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/django/deploy-django/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/django/initial-server-setup/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/graph-theory/graph-theory-101/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/gsoc-2020-with-numfocus/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/variational-inference/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/week-1-into-gsoc/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/week-2-into-gsoc/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/week-3-into-gsoc/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/week-4-into-gsoc/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://www.codingpaths.com/gsoc/week-5-into-gsoc/</loc>
-     <lastmod>2020-07-22</lastmod>
+     <lastmod>2020-07-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://www.codingpaths.com/gsoc/week-6-7-into-gsoc/</loc>
+     <lastmod>2020-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
