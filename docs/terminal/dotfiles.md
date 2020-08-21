@@ -113,7 +113,7 @@ bind C-z send-prefix
     "python.pythonPath": "/Users/user/Env/mkdocs_web/bin/python",
     "python.linting.pylintArgs": [
         "--init-hook",
-        "import sys;sys.path.append('/Users/user/Env/mkdocs_web/lib/python3.7/site-packages');import pylint_venv;pylint_venv.inithook(force_venv_activation=True)"
+        "import sys;sys.path.append('/Users/user/Env/mkdocs_web/lib/python3.8/site-packages');import pylint_venv;pylint_venv.inithook(force_venv_activation=True)"
     ]
 }
 ```
