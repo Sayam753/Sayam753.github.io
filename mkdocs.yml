@@ -32,8 +32,8 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:pymdownx.emoji.twemoji
         emoji_generator: !!python/name:pymdownx.emoji.to_svg
-    - codehilite:
-        guess_lang: false
+    - pymdownx.highlight:
+        use_pygments: true
     - toc:
         permalink: true
     - pymdownx.tasklist:
