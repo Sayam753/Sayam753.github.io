@@ -11,7 +11,7 @@
         <meta name="description" content="My Online Portfolio">
       
       
-        <link rel="canonical" href="https://www.codingpaths.com/django/deploy-django/">
+        <link rel="canonical" href="https://www.codingpaths.com/Guides/git/">
       
       
         <meta name="author" content="Sayam Kumar">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Deploy Django - Sayam's Blog</title>
+        <title>Git - Sayam's Blog</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploy-django" class="md-skip">
+        <a href="#git" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deploy Django
+              Git
             
           </span>
         </div>
@@ -181,7 +181,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Guides/git/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Guides
         </a>
       
@@ -194,7 +194,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../django/deploy-django/" class="md-tabs__link">
           Django
         </a>
       
@@ -295,10 +295,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Guides
@@ -320,11 +322,162 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../Guides/git/" title="Git" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Git
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Git" class="md-nav__link md-nav__link--active">
       Git
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands-" class="md-nav__link">
+    Basic Commands -
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Commands -">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-save-changes-" class="md-nav__link">
+    To Save changes -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-create-a-new-git-repo-with-existing-code-" class="md-nav__link">
+    To create a new git repo with existing code -
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches-" class="md-nav__link">
+    Branches -
+  </a>
+  
+    <nav class="md-nav" aria-label="Branches -">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merge-a-branch-" class="md-nav__link">
+    Merge a branch -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-branch-" class="md-nav__link">
+    Delete a branch -
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-mistakes-and-bad-commits" class="md-nav__link">
+    Fixing Mistakes and Bad Commits
+  </a>
+  
+    <nav class="md-nav" aria-label="Fixing Mistakes and Bad Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-rename-a-message-after-a-commit-" class="md-nav__link">
+    To rename a message after a commit -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-add-a-file-to-previous-commit-" class="md-nav__link">
+    To add a file to previous commit -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-a-commit-to-different-branch-" class="md-nav__link">
+    Move a commit to different branch -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-revert" class="md-nav__link">
+    Git revert
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-stash-command" class="md-nav__link">
+    Using stash command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-types-of-git-add-" class="md-nav__link">
+    Different Types of git add -
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras-" class="md-nav__link">
+    Extras -
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -337,12 +490,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Django
@@ -364,162 +515,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Deploy Django
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Deploy Django" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../django/deploy-django/" title="Deploy Django" class="md-nav__link">
       Deploy Django
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-installing-the-prerequisites" class="md-nav__link">
-    1. Installing the prerequisites
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Installing the prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-python36" class="md-nav__link">
-    Installing python3.6
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upgrading-pip-and-installing-virtualenv" class="md-nav__link">
-    Upgrading pip and installing virtualenv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-shell" class="md-nav__link">
-    Configuring the shell
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-configuring-django-project" class="md-nav__link">
-    2. Configuring Django project
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Configuring Django project">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-virtual-environments" class="md-nav__link">
-    Creating virtual environments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copying-django-project-from-local-to-remote" class="md-nav__link">
-    Copying Django project from local to remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-mysql-from-rpm" class="md-nav__link">
-    Installing MySQL from rpm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-settingspy-file" class="md-nav__link">
-    Changing settings.py file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opening-port-8000" class="md-nav__link">
-    Opening port 8000
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-application" class="md-nav__link">
-    Running the application
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-setting-up-uwsgi-and-nginx" class="md-nav__link">
-    3. Setting up uWSGI and nginx
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Setting up uWSGI and nginx">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-uwsgi-globally" class="md-nav__link">
-    Configuring uWSGI globally
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-nginx" class="md-nav__link">
-    Configuring Nginx
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -529,7 +529,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../initial-server-setup/" title="Initial Server Setup" class="md-nav__link">
+    <a href="../../django/initial-server-setup/" title="Initial Server Setup" class="md-nav__link">
       Initial Server Setup
     </a>
   </li>
@@ -800,30 +800,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installing-the-prerequisites" class="md-nav__link">
-    1. Installing the prerequisites
+  <a href="#basic-commands-" class="md-nav__link">
+    Basic Commands -
   </a>
   
-    <nav class="md-nav" aria-label="1. Installing the prerequisites">
+    <nav class="md-nav" aria-label="Basic Commands -">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-python36" class="md-nav__link">
-    Installing python3.6
+  <a href="#to-save-changes-" class="md-nav__link">
+    To Save changes -
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#upgrading-pip-and-installing-virtualenv" class="md-nav__link">
-    Upgrading pip and installing virtualenv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-shell" class="md-nav__link">
-    Configuring the shell
+  <a href="#to-create-a-new-git-repo-with-existing-code-" class="md-nav__link">
+    To create a new git repo with existing code -
   </a>
   
 </li>
@@ -834,51 +827,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-configuring-django-project" class="md-nav__link">
-    2. Configuring Django project
+  <a href="#branches-" class="md-nav__link">
+    Branches -
   </a>
   
-    <nav class="md-nav" aria-label="2. Configuring Django project">
+    <nav class="md-nav" aria-label="Branches -">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-virtual-environments" class="md-nav__link">
-    Creating virtual environments
+  <a href="#merge-a-branch-" class="md-nav__link">
+    Merge a branch -
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#copying-django-project-from-local-to-remote" class="md-nav__link">
-    Copying Django project from local to remote
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-mysql-from-rpm" class="md-nav__link">
-    Installing MySQL from rpm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changing-settingspy-file" class="md-nav__link">
-    Changing settings.py file
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opening-port-8000" class="md-nav__link">
-    Opening port 8000
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-application" class="md-nav__link">
-    Running the application
+  <a href="#delete-a-branch-" class="md-nav__link">
+    Delete a branch -
   </a>
   
 </li>
@@ -889,29 +854,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-setting-up-uwsgi-and-nginx" class="md-nav__link">
-    3. Setting up uWSGI and nginx
+  <a href="#fixing-mistakes-and-bad-commits" class="md-nav__link">
+    Fixing Mistakes and Bad Commits
   </a>
   
-    <nav class="md-nav" aria-label="3. Setting up uWSGI and nginx">
+    <nav class="md-nav" aria-label="Fixing Mistakes and Bad Commits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-uwsgi-globally" class="md-nav__link">
-    Configuring uWSGI globally
+  <a href="#to-rename-a-message-after-a-commit-" class="md-nav__link">
+    To rename a message after a commit -
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-nginx" class="md-nav__link">
-    Configuring Nginx
+  <a href="#to-add-a-file-to-previous-commit-" class="md-nav__link">
+    To add a file to previous commit -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-a-commit-to-different-branch-" class="md-nav__link">
+    Move a commit to different branch -
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-revert" class="md-nav__link">
+    Git revert
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-stash-command" class="md-nav__link">
+    Using stash command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-types-of-git-add-" class="md-nav__link">
+    Different Types of git add -
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras-" class="md-nav__link">
+    Extras -
+  </a>
   
 </li>
       
@@ -927,7 +927,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/django/deploy-django.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Sayam753/Sayam753.github.io/edit/master/docs/Guides/git.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -935,244 +935,318 @@
                   
                 
                 
-                <h1 id="deploy-django">Deploy Django<a class="headerlink" href="#deploy-django" title="Permanent link">&para;</a></h1>
-<p>In this blog, we will learn how to deploy Django Application with uWSGI and nginx on CentOS’7. Django is the most popular python based backend framework with the aim of rapid web development. Before installing anything, I recommend to read my <a href="/django/initial-server-setup">previous post</a> where I have discussed about initial server setup with ssh keys.</p>
-<h2 id="1-installing-the-prerequisites">1. Installing the prerequisites<a class="headerlink" href="#1-installing-the-prerequisites" title="Permanent link">&para;</a></h2>
-<h3 id="installing-python36">Installing python3.6<a class="headerlink" href="#installing-python36" title="Permanent link">&para;</a></h3>
-<p>First install the latest packages from EPEL and RPM. EPEL(Extra Packages for Enterprise Linux) is an open source repository that contains the latest packages for Red Hat Linux distributions. RPM is also an open source package management system from Red Hat. After all this, lets install python3 –</p>
-<div class="highlight"><pre><span></span><code>sudo yum install -y epel-release
-sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
-sudo yum update
-sudo yum install -y python36u python36u-libs python36u-devel python36u-pip python-devel
+                <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Git is a distributed version control system.</li>
+<li>Svn is a central control system.</li>
+<li>In central control system, all the files are stored in the server's database. In distributed vcs, everybody has a local repository.</li>
+<li>
+<p>There are three areas -</p>
+</li>
+<li>
+<p><code>Working Directory</code> - Where we put up all the files and codes in the local repository. We need to add them.</p>
+</li>
+<li><code>Staging Area</code> - Where we commit our files</li>
+<li><code>Repo</code> - Contains all the files</li>
+</ol>
+<h2 id="basic-commands-">Basic Commands -<a class="headerlink" href="#basic-commands-" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>git --version
+git config --global user.name <span class="s2">&quot;&lt;user-name&gt;&quot;</span>
+git config --global user.email <span class="s2">&quot;&lt;user-email-ID&gt;&quot;</span>
+git config --global --list
+git config --local --list
+git <span class="nb">help</span> &lt;verb&gt;
+git &lt;verb&gt; --help
+git init  <span class="c1"># For initialising a repository with git</span>
+rm -rf .git  <span class="c1"># To stop tracking</span>
+touch .gitignore  <span class="c1"># To put all the unwanted files which we do not want to git</span>
+git remote -v  <span class="c1"># Info about remote repo</span>
 </code></pre></div>
 
-<h3 id="upgrading-pip-and-installing-virtualenv">Upgrading pip and installing virtualenv<a class="headerlink" href="#upgrading-pip-and-installing-virtualenv" title="Permanent link">&para;</a></h3>
-<p>Pip is the most popular python package installer. Virtual environments are used for separating the different versions of any package for different projects.</p>
-<div class="highlight"><pre><span></span><code>sudo pip3.6 install --upgrade pip
-sudo pip install virtualenv virtualenvwrapper
+<h4 id="to-save-changes-">To Save changes -<a class="headerlink" href="#to-save-changes-" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>git status
+git add -A  <span class="c1"># Adds files to staging area</span>
+git commit -m <span class="s2">&quot;Message&quot;</span>
+git pull origin master  <span class="c1"># If remote is set</span>
+git push origin master
 </code></pre></div>
 
-<h3 id="configuring-the-shell">Configuring the shell<a class="headerlink" href="#configuring-the-shell" title="Permanent link">&para;</a></h3>
-<p>We will use Env directory to hold all our virtual environments. This can be configured in <code>.bashrc</code> file.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;export WORKON_HOME=~/Env&quot;</span> &gt;&gt; ~/.bashrc
-<span class="nb">echo</span> <span class="s2">&quot;source /usr/bin/virtualenvwrapper.sh&quot;</span> &gt;&gt; ~/.bashrc
+<h4 id="to-create-a-new-git-repo-with-existing-code-">To create a new git repo with existing code -<a class="headerlink" href="#to-create-a-new-git-repo-with-existing-code-" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>git init  <span class="c1"># In the folder. Also create a new repo in GitHub</span>
+git add -A
+git commit -m <span class="s2">&quot;message&quot;</span>
+git remote add origin link_to_repo
+git push -u origin master
 </code></pre></div>
 
-<p>Now, open <code>/usr/bin/virtualenvwrapper.sh</code> with either vim or nano. Find the line –</p>
-<div class="highlight"><pre><span></span><code>VIRTUALENVWRAPPER_PYTHON=&quot;$(command \which python)&quot;
+<h2 id="branches-">Branches -<a class="headerlink" href="#branches-" title="Permanent link">&para;</a></h2>
+<p>Common Overflow - create a branch for desire feature</p>
+<div class="highlight"><pre><span></span><code>git branch  <span class="c1"># To check the current branch</span>
+git branch my_branch  <span class="c1"># To initialise a branch</span>
+git checkout my_branch  <span class="c1"># To change the branch</span>
+git checkout -b my_branch  <span class="c1"># Single command for above two operations</span>
 </code></pre></div>
 
-<p>and replace python with python3.6 as –</p>
-<div class="highlight"><pre><span></span><code>VIRTUALENVWRAPPER_PYTHON=&quot;$(command \which python3.6)&quot;
+<p>After adding and commiting, push branch to remote</p>
+<div class="highlight"><pre><span></span><code>git push -u origin my_branch  <span class="c1"># To create a separate branch in the repo with the modified changes</span>
+git branch -a  <span class="c1"># Check all branches at local as well as remote repo</span>
 </code></pre></div>
 
-<p>Now, lets reflect these changes –</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/.bashrc
+<h4 id="merge-a-branch-">Merge a branch -<a class="headerlink" href="#merge-a-branch-" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>git checkout master
+git pull origin master
+git branch --merged
+git merge my_branch
+git push origin master
 </code></pre></div>
 
-<h2 id="2-configuring-django-project">2. Configuring Django project<a class="headerlink" href="#2-configuring-django-project" title="Permanent link">&para;</a></h2>
-<h3 id="creating-virtual-environments">Creating virtual environments<a class="headerlink" href="#creating-virtual-environments" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>mkvirtualenv env_1
+<h4 id="delete-a-branch-">Delete a branch -<a class="headerlink" href="#delete-a-branch-" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>git branch --merged  <span class="c1"># To check if everything is merged correctly</span>
+git branch -d my_branch  <span class="c1"># Deleted locally</span>
+git branch -D my_branch  <span class="c1"># Delete branch forcefully, if not merged</span>
+git branch -a  <span class="c1"># To check</span>
+git push origin --delete my_branch
 </code></pre></div>
 
-<p>The environment env_1 gets automatically activated. The same can be verified by –</p>
-<div class="highlight"><pre><span></span><code>which pip
-<span class="c1"># Output: ~/Env/env_1/bin/pip</span>
+<h2 id="fixing-mistakes-and-bad-commits">Fixing Mistakes and Bad Commits<a class="headerlink" href="#fixing-mistakes-and-bad-commits" title="Permanent link">&para;</a></h2>
+<h4 id="to-rename-a-message-after-a-commit-">To rename a message after a commit -<a class="headerlink" href="#to-rename-a-message-after-a-commit-" title="Permanent link">&para;</a></h4>
+<p>But this changes the hash of the commit as the hash depends of message. This also changes the git history so it is not a good option.</p>
+<div class="highlight"><pre><span></span><code>git commit --amend -m <span class="s2">&quot;Added add function&quot;</span>
 </code></pre></div>
 
-<h3 id="copying-django-project-from-local-to-remote">Copying Django project from local to remote<a class="headerlink" href="#copying-django-project-from-local-to-remote" title="Permanent link">&para;</a></h3>
-<p>Since, we have activated our virtual env, now we will copy our django project to remote server using scp. If you have uploaded it on github, just install git via yum and then git clone the project. But before doing this, lets grab all the requirements of the project. If your project already contains a requirements file, then you can skip this part. “cd” into your project’s directory and after activating virtual env in your local machine, use the following command to list out requirements in requirements.txt file in your local terminal-</p>
-<div class="highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
+<h4 id="to-add-a-file-to-previous-commit-">To add a file to previous commit -<a class="headerlink" href="#to-add-a-file-to-previous-commit-" title="Permanent link">&para;</a></h4>
+<p>First add that file to staging area. This again changes the git history.</p>
+<div class="highlight"><pre><span></span><code>touch new.py
+git add new.py
+git commit --amend  <span class="c1"># Amend the file to last commit. Vim is opened asking for any changes in commit message. OR</span>
+git commit --amend --no-edit  <span class="c1"># To keep the last commit message same</span>
+git log --stat  <span class="c1"># To see changes in a commit</span>
 </code></pre></div>
 
-<p>Now, to copy the project, use the following command in your local terminal. Do remember to put your ip and user_name configured in previous post. Write the complete path of your django project from root in local machine. This will copy the project in the home directory of the server.</p>
-<div class="highlight"><pre><span></span><code>scp -r /path/to/project user_name@your_ip_here:~
+<h4 id="move-a-commit-to-different-branch-">Move a commit to different branch -<a class="headerlink" href="#move-a-commit-to-different-branch-" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Copy the <code>hash</code> of commit you want to move - </li>
+</ol>
+<div class="highlight"><pre><span></span><code>git checkout &lt;branch-name&gt;
+git cherry-pick &lt;hash-of-commit&gt;  <span class="c1"># The changes are reflected but the commit hash is changed</span>
 </code></pre></div>
 
-<p>Now, connect to your server and activate the virtual env.</p>
-<div class="highlight"><pre><span></span><code>ssh user_name@your_ip_here
-workon env_1
+<ol>
+<li>Remove that <code>commit</code> from previous branch - </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Remove from branch</span>
+git checkout &lt;branch-name&gt;
+
+<span class="c1"># Three different types of reset -</span>
+git reset --soft &lt;previous-commit-hash-of-branch&gt;  <span class="c1"># It will keep the changes in staging area.</span>
+git reset &lt;previous-commit-hash-of-branch&gt;  <span class="c1"># Mixed reset - It will keep the changes in the working directory.</span>
+git reset --hard &lt;previous-commit-hash-of-branch&gt;  <span class="c1"># Remove all the changes from tracked files. All new files added will be there in working directory. Untracked files are left</span>
 </code></pre></div>
 
-<p>Let’s install all the requirements for the project. Use the path to requirements.txt file.</p>
-<div class="highlight"><pre><span></span><code>pip install -r /path/to/requirements.txt
+<p><strong>Warning</strong>- Use of <code>git reset --hard</code>, will reset to <code>previous commit</code> only when files are staged or commited. If they are in working directory, git reset --hard will reset only tracked files.</p>
+<ol>
+<li>To delete untracked files/directories forcefully - </li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clean -df
 </code></pre></div>
 
-<h3 id="installing-mysql-from-rpm">Installing MySQL from rpm<a class="headerlink" href="#installing-mysql-from-rpm" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo rpm -ivh https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+<ol>
+<li>Retrieve critical files that were lost, and you want them back -</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git reflog  <span class="c1"># Copy the hash</span>
+git checkout &lt;hash-copied-from-reflog&gt;  <span class="c1"># Now the head is detached. You need to create a branch if you want those changes</span>
+git branch backup  <span class="c1"># Create a backup branch</span>
 </code></pre></div>
 
-<p>Check if Mysql repo has been enabled –</p>
-<div class="highlight"><pre><span></span><code>sudo yum repolist all <span class="p">|</span> grep mysql <span class="p">|</span> grep enabled
-<span class="c1"># Output : enabled</span>
+<h4 id="git-revert">Git revert<a class="headerlink" href="#git-revert" title="Permanent link">&para;</a></h4>
+<p>Creates new commit on top of earlier commits to revert the changes.</p>
+<div class="highlight"><pre><span></span><code>git revert &lt;hash-of-commit&gt;
 </code></pre></div>
 
-<p>Install and enable mysql –</p>
-<div class="highlight"><pre><span></span><code>sudo yum -y install mysql-community-server
-sudo systemctl start mysqld
-sudo systemctl <span class="nb">enable</span> mysqld
-sudo systemctl status mysqld
+<h2 id="using-stash-command">Using stash command<a class="headerlink" href="#using-stash-command" title="Permanent link">&para;</a></h2>
+<p>Git stash helps when you have some uncommitted changes. You want to revert or switch between branches. Stash will temporarily save your changes.</p>
+<ol>
+<li>Save you changes before moving around.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git stash save <span class="s2">&quot;Message for your changes&quot;</span>
+git stash save -u <span class="s2">&quot;Message for your changes&quot;</span>  <span class="c1"># For including all untracked as well</span>
+git stash save --all <span class="s2">&quot;Message for your changes&quot;</span>  <span class="c1"># For including all untracked and ignored files as well</span>
+git stash list  <span class="c1"># To list out all our stashes</span>
 </code></pre></div>
 
-<p>Copy the mysql temporary root password from the command given below and paste this while secure installation of mysql. Change the root password and hit Enter for default actions.</p>
-<div class="highlight"><pre><span></span><code>cat /var/log/mysqld.log <span class="p">|</span> grep -i <span class="s1">&#39;temporary password&#39;</span>
-mysql_secure_installation
+<ol>
+<li>
+<p>Explore whatever you wish like.</p>
+</li>
+<li>
+<p>View the contents of the stash</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git stash show -p  <span class="c1"># For latest stash</span>
+git stash show -p stash:<span class="o">{</span>index<span class="o">}</span>  <span class="c1"># For a particular stash</span>
 </code></pre></div>
 
-<p>We have successfully installed mysql and now, we need a database to run our project. First, open the mysql interface and enter the root password –</p>
-<div class="highlight"><pre><span></span><code>mysql -u root -p
+<ol>
+<li>
+<p>Get those changes back</p>
+</li>
+<li>
+<p>Use <code>git stash apply</code></p>
+<div class="highlight"><pre><span></span><code>git stash apply  <span class="c1"># To apply the latest stash</span>
+git stash apply stash:<span class="o">{</span>index<span class="o">}</span>  <span class="c1"># To see the changes OR</span>
+git stash list  <span class="c1"># But it does not get rid of the stash</span>
+git checkout -- .  <span class="c1"># To return to spec</span>
 </code></pre></div>
 
-<p>Now, in mysql, create a database –</p>
-<div class="highlight"><pre><span></span><code>mysql&gt; CREATE DATABASE first_db<span class="p">;</span>
-mysql&gt; SHOW DATABASES<span class="p">;</span>
-mysql&gt; <span class="nb">exit</span>
+</li>
+<li>
+<p>Use <code>git stash pop</code></p>
+<div class="highlight"><pre><span></span><code>git stash pop  <span class="c1"># Applies the changes of topmost in git stash list and remove that one OR</span>
+git stash pop stash:<span class="o">{</span>index<span class="o">}</span>  <span class="c1"># Apply and delete</span>
+git stash list  <span class="c1"># That stash has been removed</span>
 </code></pre></div>
 
-<p>After this, we need to install a client to communicate with mysql –</p>
-<div class="highlight"><pre><span></span><code>sudo yum install -y mysql-connector-python.x86_64 mysql-community-devel.x86_64 mysql-cluster-community-client.x86_64 mysql-shell.x86_64 mysql-router.x86_64 gcc
-pip install mysqlclient <span class="c1"># inside the virtual environment</span>
+</li>
+<li>
+<p>Let's suppose now you do not want to keep that changes.</p>
+</li>
+<li>
+<p>Drop a single stash - </p>
+<div class="highlight"><pre><span></span><code>git stash drop  <span class="c1"># For topmost stash</span>
+git stash drop stash:<span class="o">{</span>index<span class="o">}</span>  <span class="c1"># For a specific stash</span>
 </code></pre></div>
 
-<h3 id="changing-settingspy-file">Changing settings.py file<a class="headerlink" href="#changing-settingspy-file" title="Permanent link">&para;</a></h3>
-<p>With everything installed, let’s change some settings for the project –</p>
-<div class="highlight"><pre><span></span><code>sudo nano ~/project_name/project_name/settings.py
+</li>
+<li>
+<p>Drop all stashes - </p>
+<div class="highlight"><pre><span></span><code>git stash clear
+git stash list  <span class="c1"># Empty list</span>
 </code></pre></div>
 
-<p>Add the following line to the last of the file. As we will be using nginx to deploy the application, this line tells django to place our static files in ‘static’ directory. This helps nginx to easily serve these static files.</p>
-<div class="highlight"><pre><span></span><code><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s2">&quot;static/&quot;</span><span class="p">)</span>
+</li>
+<li>
+<p>Stashes are carried from branch to branch -</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git stash save <span class="s2">&quot;Message&quot;</span>
+git checkout &lt;branch_name&gt;
+git stash pop
 </code></pre></div>
 
-<p>Do not forget to change the default database configurations to –</p>
-<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.mysql&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;first_db&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;your-root-password&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<ol>
+<li>Create a new branch and apply that stash - The stash is also deleted.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git stash branch &lt;branch_name&gt;  <span class="c1"># For topmost stash</span>
+git stash branch &lt;branch_name&gt; stash:<span class="o">{</span>index<span class="o">}</span>  <span class="c1"># For a specific stash</span>
 </code></pre></div>
 
-<p>And also add your ip in the allowed hosts –</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;your_ip_here&#39;</span><span class="p">]</span>
+<p><strong>Note</strong> - The <code>git stash save</code> API is deprecated in favour of new <code>git stash push</code> API from 2.16 version onwards.</p>
+<h2 id="different-types-of-git-add-">Different Types of git add -<a class="headerlink" href="#different-types-of-git-add-" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Stage all the changes including untracked and .dot files, in the <code>entire working tree</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>git add --all
+git add --all &lt;directory-name&gt;  <span class="c1"># It will only stage changes made in that directory</span>
+git add &lt;directory-name&gt;  <span class="c1"># --all or -A option is by default</span>
+git add --no-all &lt;directory-name&gt;  <span class="c1"># It will stage only modified and new files, not the deleted ones in directory</span>
 </code></pre></div>
 
-<h3 id="opening-port-8000">Opening port 8000<a class="headerlink" href="#opening-port-8000" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo firewall-cmd --permanent --add-service<span class="o">=</span>http
-sudo firewall-cmd --permanent --add-port<span class="o">=</span><span class="m">8000</span>/tcp
-sudo firewall-cmd --complete-reload
-sudo firewall-cmd --list-all
+<ol>
+<li>Stage only modified and deleted files, in the entire working directory, <code>-u</code> or <code>--update</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>git add -u
+git add -u &lt;directory-name&gt;  <span class="c1"># It will stage only modified and deleted, not the new ones in the directory</span>
 </code></pre></div>
 
-<h3 id="running-the-application">Running the application<a class="headerlink" href="#running-the-application" title="Permanent link">&para;</a></h3>
-<p>First, flush out the initial migrations and delete the sqlite database. “cd” into your project’s directory and use the following commands –</p>
-<div class="highlight"><pre><span></span><code>find . -path <span class="s2">&quot;*/migrations/*.py&quot;</span> -not -name <span class="s2">&quot;__init__.py&quot;</span> -delete
-find . -path <span class="s2">&quot;*/migrations/*.pyc&quot;</span>  -delete
-rm -f db.sqlite3
+<ol>
+<li>Stage all the changes including untracked and .dot files, in the <code>current working directory and below</code> not the parent ones.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git add .  <span class="c1"># Changes will be visible if we run this command in any sub directory</span>
 </code></pre></div>
 
-<p>Run the migrations to sync up with database –</p>
-<div class="highlight"><pre><span></span><code>python manage.py collectstatic
-python manage.py makemigrations
-python manage.py migrate
+<ol>
+<li>Stage with * It will stage the files it can see in ls * - This is not recommended as its not including deleted as well as .dot files</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git add *
 </code></pre></div>
 
-<p>So, finally we can run the server and see the application accessible globally –</p>
-<div class="highlight"><pre><span></span><code>python manage.py runserver <span class="m">0</span>.0.0.0:8000
+<h2 id="extras-">Extras -<a class="headerlink" href="#extras-" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># List out the differences</span>
+git diff  <span class="c1"># In working directory</span>
+git diff --staged  <span class="c1"># In staging area</span>
+git diff hash1 hash2  <span class="c1"># Between two commits via hashes</span>
+
+<span class="c1"># Discard the changes in a working directory</span>
+git checkout &lt;filename&gt;  <span class="c1"># For a single file</span>
+git checkout -- .  <span class="c1"># All tracked files</span>
+git clean -df  <span class="c1"># All untracked files</span>
+
+<span class="c1"># Remove files from staging area and put them back into working directory</span>
+git reset &lt;filename&gt;  <span class="c1"># For a single file</span>
+git reset  <span class="c1"># To remove everything</span>
+
+<span class="c1"># Newer APIs</span>
+git restore &lt;filename&gt;  <span class="c1"># To discard changes in working directory</span>
+git restore --staged &lt;filename&gt;  <span class="c1"># To unstage</span>
+
+<span class="c1"># Logs</span>
+git log  <span class="c1"># To check the various commits</span>
+git log -p  <span class="c1"># Log with patches</span>
+git log -2  <span class="c1"># For last 2 commits</span>
+git log --stat  <span class="c1"># To see the changes</span>
+git log --oneline  <span class="c1"># All commit messages in single line</span>
+
+<span class="c1"># Show the changes done by a commit</span>
+git show  <span class="c1"># For latest commit. This is equivalent to git log -p -1</span>
+git show &lt;commit-hash&gt;
+
+<span class="c1"># Alias</span>
+git config --global alias.&lt;alias&gt; &lt;command&gt;
+git config --global alias.st status  <span class="c1"># Typing git st will show results of git status</span>
+
+<span class="c1"># Remote</span>
+git remote  <span class="c1"># List of all remotes</span>
+git remote -v  <span class="c1"># Be a little more verbose</span>
+git remote add &lt;remote name&gt; &lt;url&gt;  <span class="c1"># To set a remote</span>
+git remote rename &lt;oldname&gt; &lt;newname&gt;  <span class="c1"># To modify remote&#39;s name</span>
+git remote set-url &lt;remote name&gt; &lt;url&gt;  <span class="c1"># To modify a remote&#39;s url</span>
+git remote rm &lt;remote name&gt;  <span class="c1"># To delete a remote</span>
+<span class="c1"># If we set-url or add a new remote, we need to do -</span>
+git fetch
+git remote set-head &lt;remote name&gt; master
+git push --set-upstream &lt;remote name&gt; master  <span class="c1"># To track all the branches</span>
+
+<span class="c1"># Rename</span>
+git mv &lt;old filename&gt; &lt;new filename&gt;  <span class="c1"># Rename a file</span>
+git branch -m &lt;newname&gt;  <span class="c1"># Rename a branch while working on branch</span>
+git branch -m &lt;oldname&gt; &lt;newname&gt;  <span class="c1"># Rename a branch from outside the branch</span>
+
+<span class="c1"># Signing commits</span>
+git config --global commit.gpgsign <span class="nb">true</span>
+git config --global --edit  <span class="c1"># To change the settings</span>
+
+<span class="c1"># Forks</span>
+git remote add upstream &lt;url&gt;
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+<span class="c1"># gitignore</span>
+git rm --cached &lt;file name&gt;  <span class="c1"># To ignore a file that is already checked in</span>
+git rm --cached -r &lt;folder name&gt;  <span class="c1"># To ignore a folder that is already checked in</span>
+git config --global core.excludesfile ~/.gitignore_global  <span class="c1"># And put in the files you want to ignore</span>
+
+<span class="c1"># Rewriting git history</span>
+git rebase upstream/master
+git rebase &lt;branch name&gt;  <span class="c1"># To bring all the commits forward</span>
+git rebase -i HEAD~n  <span class="c1"># n for which changes you want to make</span>
+<span class="c1"># reword - to rename a commit</span>
+<span class="c1"># drop - to delete a commit</span>
+<span class="c1"># squash - to combine commits and give a name</span>
+<span class="c1"># fixup - to combine commits and keep the name of base commit</span>
+<span class="c1"># edit - to stop execution of rebase and if you wish, split the commits</span>
+<span class="c1"># To reorder commits, just change their order in interactive rebase prompt</span>
 </code></pre></div>
-
-<p>Go to the web browser and enter your_ip:8000 to access the django application.</p>
-<h2 id="3-setting-up-uwsgi-and-nginx">3. Setting up uWSGI and nginx<a class="headerlink" href="#3-setting-up-uwsgi-and-nginx" title="Permanent link">&para;</a></h2>
-<h3 id="configuring-uwsgi-globally">Configuring uWSGI globally<a class="headerlink" href="#configuring-uwsgi-globally" title="Permanent link">&para;</a></h3>
-<p>Store all the configuration files to /etc/uwsgi/sites. You should use your project name for all configurations –</p>
-<div class="highlight"><pre><span></span><code>sudo pip install uwsgi
-sudo mkdir -p /etc/uwsgi/sites
-<span class="nb">cd</span> /etc/uwsgi/sites
-sudo nano project_name.ini
-</code></pre></div>
-
-<p>Add the following lines to the .ini file. Do remember to use your project and user name.</p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span>uwsgi<span class="o">]</span>
-<span class="nv">project</span> <span class="o">=</span> project_name
-<span class="nv">username</span> <span class="o">=</span> user_name
-<span class="nv">base</span> <span class="o">=</span> /home/%<span class="o">(</span>username<span class="o">)</span>
-
-<span class="nv">chdir</span> <span class="o">=</span> %<span class="o">(</span>base<span class="o">)</span>/%<span class="o">(</span>project<span class="o">)</span>
-<span class="nv">home</span> <span class="o">=</span> %<span class="o">(</span>base<span class="o">)</span>/Env/env_1
-<span class="nv">module</span> <span class="o">=</span> %<span class="o">(</span>project<span class="o">)</span>.wsgi:application
-
-<span class="nv">master</span> <span class="o">=</span> <span class="nb">true</span>
-<span class="nv">processes</span> <span class="o">=</span> <span class="m">5</span>
-
-<span class="nv">uid</span> <span class="o">=</span> %<span class="o">(</span>username<span class="o">)</span>
-<span class="nv">socket</span> <span class="o">=</span> /run/uwsgi/%<span class="o">(</span>project<span class="o">)</span>.sock
-chown-socket <span class="o">=</span> %<span class="o">(</span>username<span class="o">)</span>:nginx
-chmod-socket <span class="o">=</span> <span class="m">660</span>
-<span class="nv">vacuum</span> <span class="o">=</span> <span class="nb">true</span>
-</code></pre></div>
-
-<p>Ctrl+x to exit and press y to save the changes. Base and home contain the full path for the home directory and virtual environment respectively. We have created a master process for loading our app server. Here, we have used Unix Socket. This socket uses uWSGI protocol which helps nginx to reverse proxy.</p>
-<div class="highlight"><pre><span></span><code>sudo nano /etc/systemd/system/uwsgi.service
-</code></pre></div>
-
-<p>Add the following lines. Do remember to use your user name in ExecStartPre of Service section.</p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
-<span class="nv">Description</span><span class="o">=</span>uWSGI Emperor service
-
-<span class="o">[</span>Service<span class="o">]</span>
-<span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/bash -c <span class="s1">&#39;mkdir -p /run/uwsgi; chown user_name:nginx /run/uwsgi&#39;</span>
-<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/uwsgi --emperor /etc/uwsgi/sites
-<span class="nv">Restart</span><span class="o">=</span>always
-<span class="nv">KillSignal</span><span class="o">=</span>SIGQUIT
-<span class="nv">Type</span><span class="o">=</span>notify
-<span class="nv">NotifyAccess</span><span class="o">=</span>all
-
-<span class="o">[</span>Install<span class="o">]</span>
-<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
-</code></pre></div>
-
-<p>[Unit] section describes our service. [Service] section manages various applications. [Install] section ties up multi-user system state.</p>
-<h3 id="configuring-nginx">Configuring Nginx<a class="headerlink" href="#configuring-nginx" title="Permanent link">&para;</a></h3>
-<p>Installing Nginx -</p>
-<div class="highlight"><pre><span></span><code>sudo yum -y install nginx
-sudo nano /etc/nginx/nginx.conf
-</code></pre></div>
-
-<p>Add the following lines. Do remember to use your user name and project name in root and uwsgi_pass.</p>
-<div class="highlight"><pre><span></span><code>server <span class="o">{</span>
-    listen <span class="m">8000</span><span class="p">;</span>
-    server_name localhost<span class="p">;</span>
-
-    <span class="nv">location</span> <span class="o">=</span> favicon.ico <span class="o">{</span> access_log off<span class="p">;</span> log_not_found off<span class="p">;</span> <span class="o">}</span>
-    location /static/ <span class="o">{</span>
-        root /home/user_name/project_name<span class="p">;</span>
-    <span class="o">}</span>
-
-    location / <span class="o">{</span>
-        include uwsgi_params<span class="p">;</span>
-        uwsgi_pass unix:/run/uwsgi/project_name.sock<span class="p">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-
-<p>Above, we have set up a server block, with an open port to listen from. We have also specified the static file location and passed all the traffic to unix socket. Make sure the syntax of nginx file is correct and change permissions of the user.</p>
-<div class="highlight"><pre><span></span><code>sudo nginx -t
-sudo usermod -a -G user_name nginx
-chmod <span class="m">710</span> /home/user_name
-</code></pre></div>
-
-<p>Start and enable the nginx and uwsgi.</p>
-<div class="highlight"><pre><span></span><code>sudo systemctl start nginx
-sudo systemctl start uwsgi
-sudo systemctl <span class="nb">enable</span> nginx
-sudo systemctl <span class="nb">enable</span> uwsgi
-</code></pre></div>
-
-<p>Now you can directly access the django application from the ip with an open port.
-Thanks for reading!</p>
                 
                   
                     
@@ -1194,7 +1268,7 @@ Thanks for reading!</p>
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/django/deploy-django/",this.page.identifier="django/deploy-django/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://www.codingpaths.com/Guides/git/",this.page.identifier="Guides/git/"};!function(){var e=document,i=e.createElement("script");i.src="//sayam049.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -1208,7 +1282,7 @@ Thanks for reading!</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../Guides/git/" title="Git" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1217,19 +1291,19 @@ Thanks for reading!</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Git
+                Home
               </div>
             </div>
           </a>
         
         
-          <a href="../initial-server-setup/" title="Initial Server Setup" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../django/deploy-django/" title="Deploy Django" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Initial Server Setup
+                Deploy Django
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
