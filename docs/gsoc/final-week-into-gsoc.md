@@ -4,9 +4,8 @@ Hello all. So, this blog is meant to summarize the work done in the last week of
 
 I have been working on adding features to ADVI. Here is the PR [#310](https://github.com/pymc-devs/pymc4/pull/310).
 
-- [X]Add progress bar support.
-  Test progress bar in different OS.
-  (Tested on MacOS 10.15.6, Ubuntu 18.04.4 LTS, Windows 8.1 and Google colab environments)
+- [X] Add progress bar support.
+- [X]Test progress bar in different OS.
 - [X] Add ParameterConvergence criteria to test convergence.
 - [X] Add LowRank Approximation.
 - [X] Add LowRank ADVI tests.
