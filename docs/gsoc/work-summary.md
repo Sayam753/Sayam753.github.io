@@ -73,7 +73,7 @@ The Pull Requests I have opened and got merged during GSoC. I have explained eac
 
 * Add Variational Inference Interface: [#280](https://github.com/pymc-devs/pymc4/pull/280)
 * Add Full Rank Approximation: [#289](https://github.com/pymc-devs/pymc4/pull/289)
-* Add features to ADVI: [#310](https://github.com/pymc-devs/pymc4/pull/310)
+* Add features to ADVI: [#310](https://github.com/pymc-devs/pymc4/pull/310) (WIP)
 * Remove transformations for Discrete distributions: [#314](https://github.com/pymc-devs/pymc4/pull/314)
 
 ## Gists created
