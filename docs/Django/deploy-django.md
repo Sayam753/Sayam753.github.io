@@ -2,7 +2,7 @@
 
 In this blog, we will learn how to deploy Django Application with uWSGI and nginx on CentOS’7. Django is the most popular python based backend framework with the aim of rapid web development. Before installing anything, I recommend to read my [previous post](/django/initial-server-setup) where I have discussed about initial server setup with ssh keys.
 
-## 1. Installing the prerequisites
+## Installing the prerequisites
 
 ### Installing python3.6
 
@@ -51,7 +51,7 @@ Now, lets reflect these changes –
 source ~/.bashrc
 ```
 
-## 2. Configuring Django project
+## Configuring Django project
 
 ### Creating virtual environments
 
@@ -213,7 +213,7 @@ python manage.py runserver 0.0.0.0:8000
 
 Go to the web browser and enter your_ip:8000 to access the django application.
 
-## 3. Setting up uWSGI and nginx
+## Setting up uWSGI and nginx
 
 ### Configuring uWSGI globally
 

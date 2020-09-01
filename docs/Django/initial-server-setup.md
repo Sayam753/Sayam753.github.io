@@ -2,7 +2,7 @@
 
 In this blog, we will be going through initial server setup on Centos7. This is generally recommended before diving straight into production. Centos is an open source Linux distribution under RHEL(Red Hat Enterprise Linux). The reason why Centos is preferred over Ubuntu is because of its stability. Its updates can take about more than 7-8 years to come.
 
-## 1. Configuring Centos 7
+## Configuring Centos 7
 
 After purchasing a server, login into it using the ssh command in the terminal. Remember to use your public ip and the password given by the administrator.
 
@@ -40,7 +40,7 @@ sudo nano /etc/hosts
 
 Add your ip followed by tab and then type centos-server which is the hostname. Then hit CTRL+x to exit and enter to save the changes.
 
-## 2. Adding a new user
+## Adding a new user
 
 Root has the most privileges in the OS. It can be destructive to operate the server under root user. To limit the scope, we will be creating a new user. In future, if any need arises, we will change the permissions for this user.
 
@@ -51,7 +51,7 @@ gpasswd -a user_name wheel #adding sudo privileges
 logout
 ```
 
-## 3. Securing the server
+## Securing the server
 
 There are bots all around trying to find vulnerabilities in the servers. Till now, we have used password based authentication which is highly exploitable. These bots try brute force attacks to enter our server. So to fix this, we will disable password based authentication and setup ssh keys. These ssh keys will be stored in the local machine and the server. After this whenever we try to ssh into our server, it will analyse the keys and give access. So, setting up ssh keys for authentication in the local machine in home directory. Hit enter for default actions –
 
