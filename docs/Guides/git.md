@@ -1,17 +1,14 @@
 # Git
 
-1. Git is a distributed version control system.
-2. Svn is a central control system.
-3. In central control system, all the files are stored in the server's database. In distributed vcs, everybody has a local repository.
-4. There are three areas -
+* Git is a distributed version control system.
+* Svn is a central control system.
+* In central control system, all the files are stored in the server's database. In distributed vcs, everybody has a local repository.
+* There are three areas -
+    + `Working Directory` - Where we put up all the files and codes in the local repository. We need to add them.
+    + `Staging Area` - Where we commit our files
+    + `Repo` - Contains all the files
 
-   - `Working Directory` - Where we put up all the files and codes in the local repository. We need to add them.
-   - `Staging Area` - Where we commit our files
-   - `Repo` - Contains all the files
-
-
-
-## Basic Commands -
+## Basic Commands
 
 ```bash
 git --version
@@ -27,7 +24,7 @@ touch .gitignore  # To put all the unwanted files which we do not want to git
 git remote -v  # Info about remote repo
 ```
 
-#### To Save changes -
+### Save changes
 
 ```bash
 git status
@@ -37,7 +34,7 @@ git pull origin master  # If remote is set
 git push origin master
 ```
 
-#### To create a new git repo with existing code -
+### Create a new git repo with existing code
 
 ```bash
 git init  # In the folder. Also create a new repo in GitHub
@@ -47,9 +44,7 @@ git remote add origin link_to_repo
 git push -u origin master
 ```
 
-
-
-## Branches -
+## Branches
 
 Common Overflow - create a branch for desire feature
 
@@ -67,7 +62,7 @@ git push -u origin my_branch  # To create a separate branch in the repo with the
 git branch -a  # Check all branches at local as well as remote repo
 ```
 
-#### Merge a branch -
+### Merge a branch
 
 ```bash
 git checkout master
@@ -77,7 +72,7 @@ git merge my_branch
 git push origin master
 ```
 
-#### Delete a branch -
+### Delete a branch
 
 ```bash
 git branch --merged  # To check if everything is merged correctly
@@ -87,11 +82,9 @@ git branch -a  # To check
 git push origin --delete my_branch
 ```
 
-
-
 ## Fixing Mistakes and Bad Commits
 
-#### To rename a message after a commit - 
+### Rename a message after a commit
 
 But this changes the hash of the commit as the hash depends of message. This also changes the git history so it is not a good option.
 
@@ -99,7 +92,7 @@ But this changes the hash of the commit as the hash depends of message. This als
 git commit --amend -m "Added add function"
 ```
 
-#### To add a file to previous commit - 
+### Add a file to previous commit
 
 First add that file to staging area. This again changes the git history.
 
@@ -111,44 +104,44 @@ git commit --amend --no-edit  # To keep the last commit message same
 git log --stat  # To see changes in a commit
 ```
 
-#### Move a commit to different branch -
+### Move a commit to different branch
 
-1. Copy the `hash` of commit you want to move - 
+1. Copy the `hash` of commit you want to move -
 
-   ```bash
-   git checkout <branch-name>
-   git cherry-pick <hash-of-commit>  # The changes are reflected but the commit hash is changed
-   ```
+    ```bash
+    git checkout <branch-name>
+    git cherry-pick <hash-of-commit>  # The changes are reflected but the commit hash is changed
+    ```
 
-2. Remove that `commit` from previous branch - 
+2. Remove that `commit` from previous branch -
 
-   ```bash
-   # Remove from branch
-   git checkout <branch-name>
-   
-   # Three different types of reset -
-   git reset --soft <previous-commit-hash-of-branch>  # It will keep the changes in staging area.
-   git reset <previous-commit-hash-of-branch>  # Mixed reset - It will keep the changes in the working directory.
-   git reset --hard <previous-commit-hash-of-branch>  # Remove all the changes from tracked files. All new files added will be there in working directory. Untracked files are left
-   ```
+    ```bash
+    # Remove from branch
+    git checkout <branch-name>
 
-   **Warning**- Use of `git reset --hard`, will reset to `previous commit` only when files are staged or commited. If they are in working directory, git reset --hard will reset only tracked files.
+    # Three different types of reset -
+    git reset --soft <previous-commit-hash-of-branch>  # It will keep the changes in staging area.
+    git reset <previous-commit-hash-of-branch>  # Mixed reset - It will keep the changes in the working directory.
+    git reset --hard <previous-commit-hash-of-branch>  # Remove all the changes from tracked files. All new files added will be there in working directory. Untracked files are left
+    ```
 
-3. To delete untracked files/directories forcefully - 
+    **Warning**- Use of `git reset --hard`, will reset to `previous commit` only when files are staged or commited. If they are in working directory, git reset --hard will reset only tracked files.
 
-   ```bash
-   git clean -df
-   ```
+3. To delete untracked files/directories forcefully -
+
+    ```bash
+    git clean -df
+    ```
 
 4. Retrieve critical files that were lost, and you want them back -
 
-   ```bash
-   git reflog  # Copy the hash
-   git checkout <hash-copied-from-reflog>  # Now the head is detached. You need to create a branch if you want those changes
-   git branch backup  # Create a backup branch
-   ```
+    ```bash
+    git reflog  # Copy the hash
+    git checkout <hash-copied-from-reflog>  # Now the head is detached. You need to create a branch if you want those changes
+    git branch backup  # Create a backup branch
+    ```
 
-#### Git revert
+### Git revert
 
 Creates new commit on top of earlier commits to revert the changes.
 
@@ -156,117 +149,111 @@ Creates new commit on top of earlier commits to revert the changes.
 git revert <hash-of-commit>
 ```
 
-
-
 ## Using stash command
 
 Git stash helps when you have some uncommitted changes. You want to revert or switch between branches. Stash will temporarily save your changes.
 
 1. Save you changes before moving around.
 
-   ```bash
-   git stash save "Message for your changes"
-   git stash save -u "Message for your changes"  # For including all untracked as well
-   git stash save --all "Message for your changes"  # For including all untracked and ignored files as well
-   git stash list  # To list out all our stashes
-   ```
+    ```bash
+    git stash save "Message for your changes"
+    git stash save -u "Message for your changes"  # For including all untracked as well
+    git stash save --all "Message for your changes"  # For including all untracked and ignored files as well
+    git stash list  # To list out all our stashes
+    ```
 
 2. Explore whatever you wish like.
 
 3. View the contents of the stash
 
-   ```bash
-   git stash show -p  # For latest stash
-   git stash show -p stash:{index}  # For a particular stash
-   ```
+    ```bash
+    git stash show -p  # For latest stash
+    git stash show -p stash:{index}  # For a particular stash
+    ```
 
 4. Get those changes back
 
-   1. Use `git stash apply`
+    1. Use `git stash apply`
 
-      ```bash
-      git stash apply  # To apply the latest stash
-      git stash apply stash:{index}  # To see the changes OR
-      git stash list  # But it does not get rid of the stash
-      git checkout -- .  # To return to spec
-      ```
+        ```bash
+        git stash apply  # To apply the latest stash
+        git stash apply stash:{index}  # To see the changes OR
+        git stash list  # But it does not get rid of the stash
+        git checkout -- .  # To return to spec
+        ```
 
-   2. Use `git stash pop`
+    2. Use `git stash pop`
 
-      ```bash
-      git stash pop  # Applies the changes of topmost in git stash list and remove that one OR
-      git stash pop stash:{index}  # Apply and delete
-      git stash list  # That stash has been removed
-      ```
+        ```bash
+        git stash pop  # Applies the changes of topmost in git stash list and remove that one OR
+        git stash pop stash:{index}  # Apply and delete
+        git stash list  # That stash has been removed
+        ```
 
-5. Let's suppose now you do not want to keep that changes.
+5. Let's suppose now you do not want to keep that changes
 
-   1. Drop a single stash - 
+    1. Drop a single stash
 
-      ```bash
-      git stash drop  # For topmost stash
-      git stash drop stash:{index}  # For a specific stash
-      ```
+        ```bash
+        git stash drop  # For topmost stash
+        git stash drop stash:{index}  # For a specific stash
+        ```
 
-   2. Drop all stashes - 
+    2. Drop all stashes
 
-      ```bash
-      git stash clear
-      git stash list  # Empty list
-      ```
+        ```bash
+        git stash clear
+        git stash list  # Empty list
+        ```
 
-6. Stashes are carried from branch to branch -
+6. Stashes are carried from branch to branch
 
-   ```bash
-   git stash save "Message"
-   git checkout <branch_name>
-   git stash pop
-   ```
+    ```bash
+    git stash save "Message"
+    git checkout <branch_name>
+    git stash pop
+    ```
 
 7. Create a new branch and apply that stash - The stash is also deleted.
 
-   ```bash
-   git stash branch <branch_name>  # For topmost stash
-   git stash branch <branch_name> stash:{index}  # For a specific stash
-   ```
+    ```bash
+    git stash branch <branch_name>  # For topmost stash
+    git stash branch <branch_name> stash:{index}  # For a specific stash
+    ```
 
 **Note** - The `git stash save` API is deprecated in favour of new `git stash push` API from 2.16 version onwards.
 
-
-
-## Different Types of git add -
+## Different Types of git add
 
 1. Stage all the changes including untracked and .dot files, in the `entire working tree`
 
-   ```bash
-   git add --all
-   git add --all <directory-name>  # It will only stage changes made in that directory
-   git add <directory-name>  # --all or -A option is by default
-   git add --no-all <directory-name>  # It will stage only modified and new files, not the deleted ones in directory
-   ```
+    ```bash
+    git add --all
+    git add --all <directory-name>  # It will only stage changes made in that directory
+    git add <directory-name>  # --all or -A option is by default
+    git add --no-all <directory-name>  # It will stage only modified and new files, not the deleted ones in directory
+    ```
 
 2. Stage only modified and deleted files, in the entire working directory, `-u` or `--update`
 
-   ```bash
-   git add -u
-   git add -u <directory-name>  # It will stage only modified and deleted, not the new ones in the directory
-   ```
+    ```bash
+    git add -u
+    git add -u <directory-name>  # It will stage only modified and deleted, not the new ones in the directory
+    ```
 
 3. Stage all the changes including untracked and .dot files, in the `current working directory and below` not the parent ones.
 
-   ```bash
-   git add .  # Changes will be visible if we run this command in any sub directory
-   ```
+    ```bash
+    git add .  # Changes will be visible if we run this command in any sub directory
+    ```
 
-4. Stage with * It will stage the files it can see in ls * - This is not recommended as its not including deleted as well as .dot files
+4. Stage with "*" It will stage the files it can see in ls - This is not recommended as its not including deleted as well as .dot files
 
-   ```bash
-   git add *
-   ```
+    ```bash
+    git add *
+    ```
 
-
-
-## Extras -
+## Extras
 
 ```bash
 # List out the differences
