@@ -50,34 +50,22 @@ bind C-z send-prefix
 
 ```json
 {
-    "terminal.integrated.fontFamily": "Inconsolata-g for Powerline",
-    "window.zoomLevel": 0,
-    "editor.suggestSelection": "first",
-    "git.confirmSync": false,
-    "C_Cpp.updateChannel": "Insiders",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "editor.minimap.enabled": false,
+    // Editor options
     "editor.wordWrap": "off",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "editor.suggestSelection": "first",
+    // Workbench options
+    "workbench.settings.editor": "json",
     "workbench.sideBar.location": "left",
     "workbench.iconTheme": "vscode-icons",
-    "python.autoComplete.extraPaths": [],
-    "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": false,
-    "vsicons.dontShowNewVersionMessage": true,
+    // Terminal options
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "Inconsolata-g for Powerline",
     // Python options
     "python.pythonPath": "/usr/local/bin/python3",
     "python.venvPath": "/Users/user/Env",
-    // Terminal options
-    "terminal.integrated.shell.osx": "/bin/zsh",
     // Autopep8 options
     "python.languageServer": "Microsoft",
     "editor.formatOnSave": true,
@@ -103,6 +91,19 @@ bind C-z send-prefix
     "python.linting.mypyArgs": [
         "--ignore-missing-imports"
     ],
+    // Misc
+    "git.confirmSync": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/.history": true,
+        "**/.idea": true,
+        "**/.mypy_cache": true,
+        "**/__pycache__": true
+    },
 }
 ```
 
@@ -110,10 +111,16 @@ bind C-z send-prefix
 
 ```json
 {
-    "python.pythonPath": "/Users/user/Env/mkdocs_web/bin/python",
+    "python.pythonPath": "/Users/user/Env/only_osint/bin/python",
     "python.linting.pylintArgs": [
         "--init-hook",
-        "import sys;sys.path.append('/Users/user/Env/mkdocs_web/lib/python3.8/site-packages');import pylint_venv;pylint_venv.inithook(force_venv_activation=True)"
+        "import sys; sys.path.append('/Users/user/Env/only_osint/lib/python3.8/site-packages'); import pylint_venv; pylint_venv.inithook(force_venv_activation=True)",
+        "--enable=F, E, C, R, W",
+        "--disable=missing-module-docstring, no-absolute-import",
+    ],
+    "python.linting.pydocstyleArgs": [
+        "--convention=numpy",
+        "--disable=D100"
     ]
 }
 ```
@@ -128,14 +135,12 @@ precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '%F{011}( %b)%f'
 
-setopt menucomplete
 setopt PROMPT_SUBST
 PROMPT='%F{166}Sayam%f:%F{040}%1~%f ${vcs_info_msg_0_}%{$reset_color%}$ '
 
 # Personal configurations
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/Env
-export PATH=/Users/user/Library/Python/3.7/bin:$PATH
 alias p=python3
 alias jn="jupyter notebook"
 
