@@ -9,6 +9,7 @@ site_url: https://www.codingpaths.com/
 repo_name: Sayam753/Sayam753.github.io
 repo_url: https://github.com/Sayam753/Sayam753.github.io
 
+# Theme settings
 theme:
     name: 'material'
     language: en
@@ -22,6 +23,31 @@ theme:
         code: Roboto Mono
     features:
         - tabs
+
+# Nav
+nav:
+  - Home: index.md
+  - GSoC:
+    - GSoC'20 with NumFOCUS: gsoc/gsoc-2020-with-numfocus.md
+    - Variational Inference: gsoc/variational-inference.ipynb
+    - Week 1 into GSoC: gsoc/week-1-into-gsoc.md
+    - Week 2 into GSoC: gsoc/week-2-into-gsoc.md
+    - Week 3 into GSoC: gsoc/week-3-into-gsoc.md
+    - Week 4 into GSoC: gsoc/week-4-into-gsoc.md
+    - Week 5 into GSoC: gsoc/week-5-into-gsoc.md
+    - Week 6-7 into GSoC: gsoc/week-6-7-into-gsoc.md
+    - Week 9 into GSoC: gsoc/week-9-into-gsoc.md
+    - Week 10-11 into GSoC: gsoc/final-week-into-gsoc.md
+    - Work Summary: gsoc/work-summary.md
+  - Django:
+    - Initial Server Setup: django/initial-server-setup.md
+    - Deploy Django: django/deploy-django.md
+  - Guides:
+    - Git: guides/git.md
+  - Graph Theory:
+    - Graph Theory 101: graph-theory/graph-theory-101.md
+  - Terminal:
+    - Dotfiles: terminal/dotfiles.md
 
 # Extensions
 markdown_extensions:
