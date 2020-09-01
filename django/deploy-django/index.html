@@ -401,11 +401,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installing-the-prerequisites" class="md-nav__link">
-    1. Installing the prerequisites
+  <a href="#installing-the-prerequisites" class="md-nav__link">
+    Installing the prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="1. Installing the prerequisites">
+    <nav class="md-nav" aria-label="Installing the prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -435,11 +435,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-configuring-django-project" class="md-nav__link">
-    2. Configuring Django project
+  <a href="#configuring-django-project" class="md-nav__link">
+    Configuring Django project
   </a>
   
-    <nav class="md-nav" aria-label="2. Configuring Django project">
+    <nav class="md-nav" aria-label="Configuring Django project">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -490,11 +490,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-setting-up-uwsgi-and-nginx" class="md-nav__link">
-    3. Setting up uWSGI and nginx
+  <a href="#setting-up-uwsgi-and-nginx" class="md-nav__link">
+    Setting up uWSGI and nginx
   </a>
   
-    <nav class="md-nav" aria-label="3. Setting up uWSGI and nginx">
+    <nav class="md-nav" aria-label="Setting up uWSGI and nginx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -812,11 +812,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installing-the-prerequisites" class="md-nav__link">
-    1. Installing the prerequisites
+  <a href="#installing-the-prerequisites" class="md-nav__link">
+    Installing the prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="1. Installing the prerequisites">
+    <nav class="md-nav" aria-label="Installing the prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -846,11 +846,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-configuring-django-project" class="md-nav__link">
-    2. Configuring Django project
+  <a href="#configuring-django-project" class="md-nav__link">
+    Configuring Django project
   </a>
   
-    <nav class="md-nav" aria-label="2. Configuring Django project">
+    <nav class="md-nav" aria-label="Configuring Django project">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -901,11 +901,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-setting-up-uwsgi-and-nginx" class="md-nav__link">
-    3. Setting up uWSGI and nginx
+  <a href="#setting-up-uwsgi-and-nginx" class="md-nav__link">
+    Setting up uWSGI and nginx
   </a>
   
-    <nav class="md-nav" aria-label="3. Setting up uWSGI and nginx">
+    <nav class="md-nav" aria-label="Setting up uWSGI and nginx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -949,7 +949,7 @@
                 
                 <h1 id="deploy-django">Deploy Django<a class="headerlink" href="#deploy-django" title="Permanent link">&para;</a></h1>
 <p>In this blog, we will learn how to deploy Django Application with uWSGI and nginx on CentOS’7. Django is the most popular python based backend framework with the aim of rapid web development. Before installing anything, I recommend to read my <a href="/django/initial-server-setup">previous post</a> where I have discussed about initial server setup with ssh keys.</p>
-<h2 id="1-installing-the-prerequisites">1. Installing the prerequisites<a class="headerlink" href="#1-installing-the-prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="installing-the-prerequisites">Installing the prerequisites<a class="headerlink" href="#installing-the-prerequisites" title="Permanent link">&para;</a></h2>
 <h3 id="installing-python36">Installing python3.6<a class="headerlink" href="#installing-python36" title="Permanent link">&para;</a></h3>
 <p>First install the latest packages from EPEL and RPM. EPEL(Extra Packages for Enterprise Linux) is an open source repository that contains the latest packages for Red Hat Linux distributions. RPM is also an open source package management system from Red Hat. After all this, lets install python3 –</p>
 <div class="highlight"><pre><span></span><code>sudo yum install -y epel-release
@@ -982,7 +982,7 @@ sudo pip install virtualenv virtualenvwrapper
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/.bashrc
 </code></pre></div>
 
-<h2 id="2-configuring-django-project">2. Configuring Django project<a class="headerlink" href="#2-configuring-django-project" title="Permanent link">&para;</a></h2>
+<h2 id="configuring-django-project">Configuring Django project<a class="headerlink" href="#configuring-django-project" title="Permanent link">&para;</a></h2>
 <h3 id="creating-virtual-environments">Creating virtual environments<a class="headerlink" href="#creating-virtual-environments" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>mkvirtualenv env_1
 </code></pre></div>
@@ -1097,7 +1097,7 @@ python manage.py migrate
 </code></pre></div>
 
 <p>Go to the web browser and enter your_ip:8000 to access the django application.</p>
-<h2 id="3-setting-up-uwsgi-and-nginx">3. Setting up uWSGI and nginx<a class="headerlink" href="#3-setting-up-uwsgi-and-nginx" title="Permanent link">&para;</a></h2>
+<h2 id="setting-up-uwsgi-and-nginx">Setting up uWSGI and nginx<a class="headerlink" href="#setting-up-uwsgi-and-nginx" title="Permanent link">&para;</a></h2>
 <h3 id="configuring-uwsgi-globally">Configuring uWSGI globally<a class="headerlink" href="#configuring-uwsgi-globally" title="Permanent link">&para;</a></h3>
 <p>Store all the configuration files to /etc/uwsgi/sites. You should use your project name for all configurations –</p>
 <div class="highlight"><pre><span></span><code>sudo pip install uwsgi
