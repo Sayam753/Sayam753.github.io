@@ -107,24 +107,6 @@ bind C-z send-prefix
 }
 ```
 
-## .vscode_for_environments.json
-
-```json
-{
-    "python.pythonPath": "/Users/user/Env/only_osint/bin/python",
-    "python.linting.pylintArgs": [
-        "--init-hook",
-        "import sys; sys.path.append('/Users/user/Env/only_osint/lib/python3.8/site-packages'); import pylint_venv; pylint_venv.inithook(force_venv_activation=True)",
-        "--enable=F, E, C, R, W",
-        "--disable=missing-module-docstring, no-absolute-import",
-    ],
-    "python.linting.pydocstyleArgs": [
-        "--convention=numpy",
-        "--disable=D100"
-    ]
-}
-```
-
 ## .zshrc
 
 ```bash
