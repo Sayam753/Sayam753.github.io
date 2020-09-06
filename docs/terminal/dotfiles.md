@@ -24,7 +24,6 @@ This blog post contains my daily used dotfiles which I do not wish to lose.
 .vscode
 .mypy_cache
 .DS_Store
-*.ipynb
 ```
 
 ## .pylintrc
@@ -69,13 +68,17 @@ bind C-z send-prefix
     // Autopep8 options
     "python.languageServer": "Microsoft",
     "editor.formatOnSave": true,
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=100"
+    ],
     // Pylint options
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintUseMinimalCheckers": false,
     "python.linting.pylintPath": "/usr/local/bin/pylint",
+    "python.linting.pylintCategorySeverity.refactor": "Information",
     "python.linting.pylintArgs": [
         "--enable=F, E, C, R, W",
     ],
