@@ -819,7 +819,6 @@
 .vscode
 .mypy_cache
 .DS_Store
-*.ipynb
 </code></pre></div>
 
 <h2 id="pylintrc">.pylintrc<a class="headerlink" href="#pylintrc" title="Permanent link">&para;</a></h2>
@@ -857,13 +856,17 @@ bind C-z send-prefix
     <span class="err">//</span> <span class="err">Autopep8</span> <span class="err">options</span>
     <span class="nt">&quot;python.languageServer&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft&quot;</span><span class="p">,</span>
     <span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;python.formatting.provider&quot;</span><span class="p">:</span> <span class="s2">&quot;autopep8&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;python.formatting.autopep8Path&quot;</span><span class="p">:</span> <span class="s2">&quot;/usr/local/bin/autopep8&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.formatting.provider&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.formatting.blackPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/usr/local/bin/black&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.formatting.blackArgs&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;--line-length=100&quot;</span>
+    <span class="p">],</span>
     <span class="err">//</span> <span class="err">Pylint</span> <span class="err">options</span>
     <span class="nt">&quot;python.linting.enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;python.linting.pylintEnabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;python.linting.pylintUseMinimalCheckers&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="nt">&quot;python.linting.pylintPath&quot;</span><span class="p">:</span> <span class="s2">&quot;/usr/local/bin/pylint&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;python.linting.pylintCategorySeverity.refactor&quot;</span><span class="p">:</span> <span class="s2">&quot;Information&quot;</span><span class="p">,</span>
     <span class="nt">&quot;python.linting.pylintArgs&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;--enable=F, E, C, R, W&quot;</span><span class="p">,</span>
     <span class="p">],</span>
@@ -929,7 +932,7 @@ setopt PROMPT_SUBST
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2020</span>
     
   </small>
 </div>
