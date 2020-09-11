@@ -12,6 +12,7 @@ repo_url: https://github.com/Sayam753/Sayam753.github.io
 # Theme settings
 theme:
     name: 'material'
+    custom_dir: overrides
     language: en
     icon:
         logo: 'fontawesome/solid/robot'
@@ -71,7 +72,8 @@ extra_css: [extra.css]
 # Plugins
 plugins:
     - search
-    - mkdocs-jupyter
+    - mkdocs-jupyter:
+        include_source: True
     - git-revision-date-localized
         
 extra:
