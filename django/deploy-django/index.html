@@ -960,104 +960,83 @@ sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum update
 sudo yum install -y python36u python36u-libs python36u-devel python36u-pip python-devel
 </code></pre></div>
-
 <h3 id="upgrading-pip-and-installing-virtualenv">Upgrading pip and installing virtualenv<a class="headerlink" href="#upgrading-pip-and-installing-virtualenv" title="Permanent link">&para;</a></h3>
 <p>Pip is the most popular python package installer. Virtual environments are used for separating the different versions of any package for different projects.</p>
 <div class="highlight"><pre><span></span><code>sudo pip3.6 install --upgrade pip
 sudo pip install virtualenv virtualenvwrapper
 </code></pre></div>
-
 <h3 id="configuring-the-shell">Configuring the shell<a class="headerlink" href="#configuring-the-shell" title="Permanent link">&para;</a></h3>
 <p>We will use Env directory to hold all our virtual environments. This can be configured in <code>.bashrc</code> file.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;export WORKON_HOME=~/Env&quot;</span> &gt;&gt; ~/.bashrc
 <span class="nb">echo</span> <span class="s2">&quot;source /usr/bin/virtualenvwrapper.sh&quot;</span> &gt;&gt; ~/.bashrc
 </code></pre></div>
-
 <p>Now, open <code>/usr/bin/virtualenvwrapper.sh</code> with either vim or nano. Find the line –</p>
 <div class="highlight"><pre><span></span><code>VIRTUALENVWRAPPER_PYTHON=&quot;$(command \which python)&quot;
 </code></pre></div>
-
 <p>and replace python with python3.6 as –</p>
 <div class="highlight"><pre><span></span><code>VIRTUALENVWRAPPER_PYTHON=&quot;$(command \which python3.6)&quot;
 </code></pre></div>
-
 <p>Now, lets reflect these changes –</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/.bashrc
 </code></pre></div>
-
 <h2 id="configuring-django-project">Configuring Django project<a class="headerlink" href="#configuring-django-project" title="Permanent link">&para;</a></h2>
 <h3 id="creating-virtual-environments">Creating virtual environments<a class="headerlink" href="#creating-virtual-environments" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>mkvirtualenv env_1
 </code></pre></div>
-
 <p>The environment env_1 gets automatically activated. The same can be verified by –</p>
 <div class="highlight"><pre><span></span><code>which pip
 <span class="c1"># Output: ~/Env/env_1/bin/pip</span>
 </code></pre></div>
-
 <h3 id="copying-django-project-from-local-to-remote">Copying Django project from local to remote<a class="headerlink" href="#copying-django-project-from-local-to-remote" title="Permanent link">&para;</a></h3>
 <p>Since, we have activated our virtual env, now we will copy our django project to remote server using scp. If you have uploaded it on github, just install git via yum and then git clone the project. But before doing this, lets grab all the requirements of the project. If your project already contains a requirements file, then you can skip this part. “cd” into your project’s directory and after activating virtual env in your local machine, use the following command to list out requirements in requirements.txt file in your local terminal-</p>
 <div class="highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
 </code></pre></div>
-
 <p>Now, to copy the project, use the following command in your local terminal. Do remember to put your ip and user_name configured in previous post. Write the complete path of your django project from root in local machine. This will copy the project in the home directory of the server.</p>
 <div class="highlight"><pre><span></span><code>scp -r /path/to/project user_name@your_ip_here:~
 </code></pre></div>
-
 <p>Now, connect to your server and activate the virtual env.</p>
 <div class="highlight"><pre><span></span><code>ssh user_name@your_ip_here
 workon env_1
 </code></pre></div>
-
 <p>Let’s install all the requirements for the project. Use the path to requirements.txt file.</p>
 <div class="highlight"><pre><span></span><code>pip install -r /path/to/requirements.txt
 </code></pre></div>
-
 <h3 id="installing-mysql-from-rpm">Installing MySQL from rpm<a class="headerlink" href="#installing-mysql-from-rpm" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo rpm -ivh https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
 </code></pre></div>
-
 <p>Check if Mysql repo has been enabled –</p>
 <div class="highlight"><pre><span></span><code>sudo yum repolist all <span class="p">|</span> grep mysql <span class="p">|</span> grep enabled
 <span class="c1"># Output : enabled</span>
 </code></pre></div>
-
 <p>Install and enable mysql –</p>
 <div class="highlight"><pre><span></span><code>sudo yum -y install mysql-community-server
 sudo systemctl start mysqld
 sudo systemctl <span class="nb">enable</span> mysqld
 sudo systemctl status mysqld
 </code></pre></div>
-
 <p>Copy the mysql temporary root password from the command given below and paste this while secure installation of mysql. Change the root password and hit Enter for default actions.</p>
 <div class="highlight"><pre><span></span><code>cat /var/log/mysqld.log <span class="p">|</span> grep -i <span class="s1">&#39;temporary password&#39;</span>
 mysql_secure_installation
 </code></pre></div>
-
 <p>We have successfully installed mysql and now, we need a database to run our project. First, open the mysql interface and enter the root password –</p>
 <div class="highlight"><pre><span></span><code>mysql -u root -p
 </code></pre></div>
-
 <p>Now, in mysql, create a database –</p>
 <div class="highlight"><pre><span></span><code>mysql&gt; CREATE DATABASE first_db<span class="p">;</span>
 mysql&gt; SHOW DATABASES<span class="p">;</span>
 mysql&gt; <span class="nb">exit</span>
 </code></pre></div>
-
 <p>After this, we need to install a client to communicate with mysql –</p>
 <div class="highlight"><pre><span></span><code>sudo yum install -y mysql-connector-python.x86_64 mysql-community-devel.x86_64 mysql-cluster-community-client.x86_64 mysql-shell.x86_64 mysql-router.x86_64 gcc
 pip install mysqlclient <span class="c1"># inside the virtual environment</span>
 </code></pre></div>
-
 <h3 id="changing-settingspy-file">Changing settings.py file<a class="headerlink" href="#changing-settingspy-file" title="Permanent link">&para;</a></h3>
 <p>With everything installed, let’s change some settings for the project –</p>
 <div class="highlight"><pre><span></span><code>sudo nano ~/project_name/project_name/settings.py
 </code></pre></div>
-
 <p>Add the following line to the last of the file. As we will be using nginx to deploy the application, this line tells django to place our static files in ‘static’ directory. This helps nginx to easily serve these static files.</p>
 <div class="highlight"><pre><span></span><code><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s2">&quot;static/&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Do not forget to change the default database configurations to –</p>
 <div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
@@ -1070,35 +1049,29 @@ pip install mysqlclient <span class="c1"># inside the virtual environment</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>And also add your ip in the allowed hosts –</p>
 <div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;your_ip_here&#39;</span><span class="p">]</span>
 </code></pre></div>
-
 <h3 id="opening-port-8000">Opening port 8000<a class="headerlink" href="#opening-port-8000" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo firewall-cmd --permanent --add-service<span class="o">=</span>http
 sudo firewall-cmd --permanent --add-port<span class="o">=</span><span class="m">8000</span>/tcp
 sudo firewall-cmd --complete-reload
 sudo firewall-cmd --list-all
 </code></pre></div>
-
 <h3 id="running-the-application">Running the application<a class="headerlink" href="#running-the-application" title="Permanent link">&para;</a></h3>
 <p>First, flush out the initial migrations and delete the sqlite database. “cd” into your project’s directory and use the following commands –</p>
 <div class="highlight"><pre><span></span><code>find . -path <span class="s2">&quot;*/migrations/*.py&quot;</span> -not -name <span class="s2">&quot;__init__.py&quot;</span> -delete
 find . -path <span class="s2">&quot;*/migrations/*.pyc&quot;</span>  -delete
 rm -f db.sqlite3
 </code></pre></div>
-
 <p>Run the migrations to sync up with database –</p>
 <div class="highlight"><pre><span></span><code>python manage.py collectstatic
 python manage.py makemigrations
 python manage.py migrate
 </code></pre></div>
-
 <p>So, finally we can run the server and see the application accessible globally –</p>
 <div class="highlight"><pre><span></span><code>python manage.py runserver <span class="m">0</span>.0.0.0:8000
 </code></pre></div>
-
 <p>Go to the web browser and enter your_ip:8000 to access the django application.</p>
 <h2 id="setting-up-uwsgi-and-nginx">Setting up uWSGI and nginx<a class="headerlink" href="#setting-up-uwsgi-and-nginx" title="Permanent link">&para;</a></h2>
 <h3 id="configuring-uwsgi-globally">Configuring uWSGI globally<a class="headerlink" href="#configuring-uwsgi-globally" title="Permanent link">&para;</a></h3>
@@ -1108,7 +1081,6 @@ sudo mkdir -p /etc/uwsgi/sites
 <span class="nb">cd</span> /etc/uwsgi/sites
 sudo nano project_name.ini
 </code></pre></div>
-
 <p>Add the following lines to the .ini file. Do remember to use your project and user name.</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>uwsgi<span class="o">]</span>
 <span class="nv">project</span> <span class="o">=</span> project_name
@@ -1128,11 +1100,9 @@ chown-socket <span class="o">=</span> %<span class="o">(</span>username<span cla
 chmod-socket <span class="o">=</span> <span class="m">660</span>
 <span class="nv">vacuum</span> <span class="o">=</span> <span class="nb">true</span>
 </code></pre></div>
-
 <p>Ctrl+x to exit and press y to save the changes. Base and home contain the full path for the home directory and virtual environment respectively. We have created a master process for loading our app server. Here, we have used Unix Socket. This socket uses uWSGI protocol which helps nginx to reverse proxy.</p>
 <div class="highlight"><pre><span></span><code>sudo nano /etc/systemd/system/uwsgi.service
 </code></pre></div>
-
 <p>Add the following lines. Do remember to use your user name in ExecStartPre of Service section.</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>Unit<span class="o">]</span>
 <span class="nv">Description</span><span class="o">=</span>uWSGI Emperor service
@@ -1148,14 +1118,12 @@ chmod-socket <span class="o">=</span> <span class="m">660</span>
 <span class="o">[</span>Install<span class="o">]</span>
 <span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
 </code></pre></div>
-
 <p>[Unit] section describes our service. [Service] section manages various applications. [Install] section ties up multi-user system state.</p>
 <h3 id="configuring-nginx">Configuring Nginx<a class="headerlink" href="#configuring-nginx" title="Permanent link">&para;</a></h3>
 <p>Installing Nginx -</p>
 <div class="highlight"><pre><span></span><code>sudo yum -y install nginx
 sudo nano /etc/nginx/nginx.conf
 </code></pre></div>
-
 <p>Add the following lines. Do remember to use your user name and project name in root and uwsgi_pass.</p>
 <div class="highlight"><pre><span></span><code>server <span class="o">{</span>
     listen <span class="m">8000</span><span class="p">;</span>
@@ -1172,20 +1140,17 @@ sudo nano /etc/nginx/nginx.conf
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-
 <p>Above, we have set up a server block, with an open port to listen from. We have also specified the static file location and passed all the traffic to unix socket. Make sure the syntax of nginx file is correct and change permissions of the user.</p>
 <div class="highlight"><pre><span></span><code>sudo nginx -t
 sudo usermod -a -G user_name nginx
 chmod <span class="m">710</span> /home/user_name
 </code></pre></div>
-
 <p>Start and enable the nginx and uwsgi.</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl start nginx
 sudo systemctl start uwsgi
 sudo systemctl <span class="nb">enable</span> nginx
 sudo systemctl <span class="nb">enable</span> uwsgi
 </code></pre></div>
-
 <p>Now you can directly access the django application from the ip with an open port.
 Thanks for reading!</p>
                 
