@@ -28,6 +28,8 @@ theme:
 # Nav
 nav:
   - Home: index.md
+  - Bayesian Statistics:
+    - Multilevel Modelling with Variational Inference: bayesian/multilevel_modelling_with_variational_inference.ipynb
   - GSoC:
     - GSoC'20 with NumFOCUS: gsoc/gsoc-2020-with-numfocus.md
     - Variational Inference: gsoc/variational-inference.ipynb
