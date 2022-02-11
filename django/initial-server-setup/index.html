@@ -875,27 +875,22 @@
 <p>After purchasing a server, login into it using the ssh command in the terminal. Remember to use your public ip and the password given by the administrator.</p>
 <div class="highlight"><pre><span></span><code>ssh root@your_ip_here
 </code></pre></div>
-
 <p>If you are getting a warning like “LC_CTYPE: cannot change locale (UTF-8): No such file or directory”, then enter the following command in your local terminal by logging out. The LC variables determine the language of encoding the characters. So, we need to export this variable.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">logout</span>
 <span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
 ssh root@your_ip_here
 </code></pre></div>
-
 <h3 id="updating-centos">Updating centos<a class="headerlink" href="#updating-centos" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo yum update
 sudo yum upgrade
 </code></pre></div>
-
 <h3 id="setting-up-hostname">Setting up hostname<a class="headerlink" href="#setting-up-hostname" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>hostnamectl set-hostname centos-server
 hostname <span class="c1"># to check the hostname</span>
 </code></pre></div>
-
 <h3 id="setting-up-hostname-in-the-hosts-file">Setting up hostname in the hosts file<a class="headerlink" href="#setting-up-hostname-in-the-hosts-file" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>sudo nano /etc/hosts
 </code></pre></div>
-
 <p>Add your ip followed by tab and then type centos-server which is the hostname. Then hit CTRL+x to exit and enter to save the changes.</p>
 <h2 id="adding-a-new-user">Adding a new user<a class="headerlink" href="#adding-a-new-user" title="Permanent link">&para;</a></h2>
 <p>Root has the most privileges in the OS. It can be destructive to operate the server under root user. To limit the scope, we will be creating a new user. In future, if any need arises, we will change the permissions for this user.</p>
@@ -904,27 +899,22 @@ passwd user_name <span class="c1">#setting up password for new user</span>
 gpasswd -a user_name wheel <span class="c1">#adding sudo privileges</span>
 <span class="nb">logout</span>
 </code></pre></div>
-
 <h2 id="securing-the-server">Securing the server<a class="headerlink" href="#securing-the-server" title="Permanent link">&para;</a></h2>
 <p>There are bots all around trying to find vulnerabilities in the servers. Till now, we have used password based authentication which is highly exploitable. These bots try brute force attacks to enter our server. So to fix this, we will disable password based authentication and setup ssh keys. These ssh keys will be stored in the local machine and the server. After this whenever we try to ssh into our server, it will analyse the keys and give access. So, setting up ssh keys for authentication in the local machine in home directory. Hit enter for default actions –</p>
 <div class="highlight"><pre><span></span><code>ssh-keygen -t rsa <span class="c1">#generating keys</span>
 ssh-copy-id user_name@your_ip_here <span class="c1">#coping the keys to the server</span>
 <span class="nb">logout</span>
 </code></pre></div>
-
 <p>Now you can ssh login without password for the new user –</p>
 <div class="highlight"><pre><span></span><code>ssh user_name@your_ip_here
 </code></pre></div>
-
 <p>Change configuration in <code>/etc/ssh/sshd_config</code>, thereby making our server more secure –</p>
 <div class="highlight"><pre><span></span><code>PermitRootLogin no
 PasswordAuthentication no
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code>sudo nano /etc/ssh/sshd_config
 sudo systemctl restart sshd
 </code></pre></div>
-
 <p>Up next – Deploy Django Applications on Centos
 Thanks for reading!</p>
                 
