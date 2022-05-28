@@ -91,11 +91,9 @@ extra:
       link: "https://twitter.com/sayamkumar753"
     - icon: "fontawesome/brands/linkedin"
       link: "https://www.linkedin.com/in/sayam049/"
-
-# Analytics
-google_analytics:
-  - UA-142581559-1
-  - auto
+  analytics:
+    provider: google
+    property: UA-142581559-1
 
 # Copyright
 copyright: Copyright &copy; 2022 codingpaths.com
