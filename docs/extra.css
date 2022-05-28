@@ -1,19 +1,3 @@
 pre {
     overflow: auto;
 }
-
-.iframe-slideshare-16x9 {
-    padding-bottom: calc(56.25% + 38px);
-    position: relative;
-    width: 100%;
-    height: 0;
-}
-
-.iframe-slideshare-16x9 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border:1px solid #CCC; 
-}
