@@ -53,6 +53,9 @@ nav:
       - Graph Theory 101: graph-theory/graph-theory-101.md
   - Terminal:
       - Dotfiles: terminal/dotfiles.md
+  - Talks:
+      - 2022:
+          - Intro to Open Source: talks/2022/intro-to-open-source.md
 
 # Extensions
 markdown_extensions:
@@ -62,8 +65,8 @@ markdown_extensions:
   - pymdownx.details
   - def_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       use_pygments: true
   - toc:
