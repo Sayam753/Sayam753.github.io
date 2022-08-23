@@ -45,7 +45,7 @@ mkdocs-jupyter==0.20.1
 mkdocs-material==8.2.13
 mkdocs-material-extensions==1.0.3
 nbclient==0.6.2
-nbconvert==6.5.0
+nbconvert==6.5.1
 nbformat==5.4.0
 nest-asyncio==1.5.5
 nltk==3.7
