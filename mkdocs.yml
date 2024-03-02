@@ -16,7 +16,7 @@ theme:
   icon:
     logo: "fontawesome/solid/robot"
   palette:
-    primary: indigo
+    primary: black
     accent: light blue
     scheme: slate
   font:
