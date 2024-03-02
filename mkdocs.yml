@@ -64,9 +64,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - def_list
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
       use_pygments: true
   - toc:
