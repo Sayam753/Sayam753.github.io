@@ -86,7 +86,6 @@ plugins:
   - git-revision-date-localized
 
 extra:
-  disqus: sayam049
   social:
     - icon: "fontawesome/brands/github"
       link: "https://github.com/Sayam753"
@@ -99,4 +98,4 @@ extra:
     property: UA-142581559-1
 
 # Copyright
-copyright: Copyright &copy; 2022 codingpaths.com
+copyright: Copyright &copy; 2024 codingpaths.com
