@@ -1825,6 +1825,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="a-gentle-introduction-to-partial-pooled-models">A Gentle Introduction to Partial Pooled models<a class="anchor-link" href="#a-gentle-introduction-to-partial-pooled-models">¶</a></h1><p>In this blog, we'll learn about the partial pooled models and where they are useful. In addition, we'll use PyMC framework to implement a simple partial pooled model.</p>
+<p>I'll also derive the equations for parameters involved in these models (which will hopefully be fun to read). So, lets get started!</p>
 <h2 id="a-practical-example">A practical example<a class="anchor-link" href="#a-practical-example">¶</a></h2><p>Lets take a practical example to understand partial pooled models and related variants.</p>
 <p>Imagine you are a data scientist tasked with analyzing the academic performance of students across various schools in a city. Each school caters to a unique demographic, with varying resources and teaching methods. Your goal is to estimate the average exam scores of students in different schools. However, you face a challenge – some schools have a large number of students with comprehensive data, while other schools are smaller and have limited data available.</p>
 <p>Now lets create some representative data for this task. I'll refer school as a group in some contexts below.</p>
@@ -2482,7 +2483,7 @@ $$</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Here is the derivation of the equation: This is the real reason for me writing this blog post, i.e. to share the derivation of group level mean estimates of partially pooled model</p>
-<details class="tip">
+<details class="note">
 <summary>Derivation</summary>
 <p>
 <p>% Assuming a normal model for the data $y_j$ for group j with a normal prior for the mean $\alpha_j$.</p>
@@ -2904,7 +2905,7 @@ Sayam</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 23, 2024</span>
   </span>
 
     
