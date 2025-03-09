@@ -48,7 +48,7 @@ I love to work in the field of AI because I am inspired by observing how AI posi
 
 In my free time, I like to travel, play chess and listen to Punjabi/Hindi music.<br><br>
 
-This year I am looking forward to dig deeper into intersection of Reinforcement Learning and Bayesian statistics, improve my fitness consistently, and pick up learning violin.<br><br>
+This year I am looking forward to dig deeper into intersection of Reinforcement Learning and Bayesian statistics, to improve my fitness consistently, and pick up learning violin.<br><br>
     </p>
   </div>
 </div>
